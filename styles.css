@@ -31,77 +31,6 @@ html {
 	font-size: 3rem;
 }
 
-/* ********************************** */
-/*               HEADER               */
-/* ********************************** */
-.container-hero {
-	background-color: var(--background-color);
-}
-
-.hero {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 2rem 0;
-}
-
-.customer-support {
-	display: flex;
-	align-items: center;
-	gap: 2rem;
-}
-
-.customer-support i {
-	font-size: 3.3rem;
-}
-
-.content-customer-support {
-	display: flex;
-	flex-direction: column;
-}
-
-.container-logo {
-	display: flex;
-	align-items: center;
-	gap: 0.5rem;
-}
-
-.container-logo i {
-	font-size: 3rem;
-}
-
-.container-logo h1 a {
-	text-decoration: none;
-	color: #000;
-	font-size: 3rem;
-	text-transform: uppercase;
-	letter-spacing: -1px;
-}
-
-.container-user {
-	display: flex;
-	gap: 1rem;
-	cursor: pointer;
-}
-
-.container-user .fa-user {
-	font-size: 3rem;
-	color: var(--primary-color);
-	padding-right: 2.5rem;
-	border-right: 1px solid #e2e2e2;
-}
-
-.container-user .fa-basket-shopping {
-	font-size: 3rem;
-	color: var(--primary-color);
-	padding-left: 1rem;
-}
-
-.content-shopping-cart {
-	display: flex;
-	flex-direction: column;
-}
-
 /* ************* NAVBAR ************* */
 .container-navbar {
 	background-color: var(--primary-color);
@@ -109,9 +38,9 @@ html {
 
 .navbar {
 	display: flex;
-	justify-content: space-between;
+	justify-content:space-around;
 	align-items: center;
-	padding: 1rem 0;
+	padding: 2rem 0;
 }
 
 .navbar .fa-bars {
@@ -120,7 +49,7 @@ html {
 
 .menu {
 	display: flex;
-	gap: 2rem;
+	gap: 1rem;
 }
 
 .menu li {
@@ -131,7 +60,8 @@ html {
 	text-decoration: none;
 	font-size: 1.3rem;
 	color: var(--dark-color);
-	font-weight: 600;
+	font-weight: 400;
+	font:bold;
 	text-transform: uppercase;
 	position: relative;
 }
@@ -164,7 +94,7 @@ html {
 	border: 2px solid #fff;
 	border-radius: 2rem;
 	background-color: #fff;
-	height: 4.4rem;
+	height: 3.4rem;
 	overflow: hidden;
 }
 
@@ -172,7 +102,7 @@ html {
 	outline: none;
 	font-family: inherit;
 	border: none;
-	width: 25rem;
+	width: 15rem;
 	font-size: 1.4rem;
 	padding: 0 2rem;
 	color: #777;
@@ -198,13 +128,55 @@ html {
 	color: #fff;
 }
 
+.container-logo {
+	display: flex;
+	align-items: center;
+	gap: 0.3rem;
+}
+
+.container-logo i {
+	font-size: 3rem;
+}
+
+.container-logo h1 a {
+	text-decoration: none;
+	color: #000;
+	font-size: 2rem;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+}
+
+.container-user {
+	display: flex ;
+	gap: 1rem;
+	cursor: pointer;
+}
+
+.container-user .fa-user {
+	font-size:2rem;
+	color: var(--secondary-color);
+	padding-right: 2.5rem;
+	border-right: 1px solid #e2e2e2;
+}
+
+.container-user .fa-basket-shopping {
+	font-size: 2rem;
+	color: var(--secondary-color);
+	padding-left: 1rem;
+}
+
+.content-shopping-cart {
+	display: flex;
+	flex-direction: column;
+}
+
 /* ********************************** */
 /*               BANNER               */
 /* ********************************** */
 .banner {
-	background-image: linear-gradient(100deg, #000000, #00000020),
+	background-image: linear-gradient(80deg, #000000, #c97b2320),
 		url('img/banner.jpg');
-	height: 60rem;
+	height: 40rem;
 	background-size: cover;
 	background-position: center;
 }
@@ -212,7 +184,7 @@ html {
 .content-banner {
 	max-width: 90rem;
 	margin: 0 auto;
-	padding: 25rem 0;
+	padding: 10rem 0;
 }
 
 .content-banner p {
