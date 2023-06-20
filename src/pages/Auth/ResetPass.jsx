@@ -5,7 +5,7 @@ import { Link, useNavigate, useSearchParams } from "react-router-dom";
 
 import notfoundImage from "../../assets/images/empty-box.svg";
 import loadingImage from "../../assets/images/loading.svg";
-import icon from "../../assets/donHenryCafe.svg";
+import icon from "../../assets/donHenryCafe.png";
 import { resetPass, verifyResetPass } from "../../utils/dataProvider/auth";
 
 function ResetPass() {

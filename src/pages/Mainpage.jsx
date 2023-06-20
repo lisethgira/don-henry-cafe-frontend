@@ -29,10 +29,10 @@ import Header from '../components/Header';
 class Mainpage extends Component {
   state = {
     provide: [
-      "High quality beans",
-      "Healthy meals, you can request the ingredients",
-      "Chat with our staff to get better experience for ordering",
-      "Free member card with a minimum purchase of IDR 200.000.",
+      "Café de granos de alta calidad",
+      "Comidas saludables, puedes solicitar los ingredientes",
+      "Chatea con nuestro personal para obtener una mejor experiencia al hacer pedidos",
+      
     ],
     reviews: [
       {
@@ -58,23 +58,21 @@ class Mainpage extends Component {
             <div className="global-px">
               <div className="flex flex-col gap-6 w-[75%] lg:w-[50%] text-sm">
                 <h2 className="text-4xl font-bold">
-                  Start Your Day with Coofee and Good Meals
+                  Inicia tu día con un buen cafe!  
                 </h2>
                 <p>
-                  We provide high quality beans, good taste, and healthy meals
-                  made by love just for you. Start your day with us for a bigger
-                  smile!
+                Ofrecemos alta calidad, buen gusto y comidas saludables hechas con amor solo para ti.
                 </p>
                 <div className="mt-5">
                   <Link
                     className="bg-secondary px-6 py-4 text-[#6A4029] rounded-xl"
                     to={"/products/"}
                   >
-                    Get Started
+                    Haz tu compra!
                   </Link>
                 </div>
               </div>
-              <section className="relative bg-white mt-20 mb-[-9rem] rounded-xl shadow-xl text-quartenary flex flex-row py-5 justify-center items-center text-center md:text-left">
+             {/*  <section className="relative bg-white mt-20 mb-[-9rem] rounded-xl shadow-xl text-quartenary flex flex-row py-5 justify-center items-center text-center md:text-left">
                 <aside className="flex-1 border-r-2 py-2 md:py-6 flex flex-col md:flex-row justify-center gap-3 md:gap-8 items-center">
                   <div>
                     <div className="bg-secondary rounded-full p-2 w-10 aspect-square flex justify-center items-center">
@@ -104,7 +102,7 @@ class Mainpage extends Component {
                     <p className="font-normal text-primary">Stores</p>
                   </div>
                 </aside>
-              </section>
+              </section> */}
             </div>
           </section>
           <div className="mb-8 md:mb-20"></div>
@@ -114,11 +112,11 @@ class Mainpage extends Component {
             </div>
             <div className="flex-1 flex flex-col justify-center gap-5">
               <h2 className="text-quartenary font-semibold text-[35px]">
-                We Provide Good Coffee and Healthy Meals
+              Brindamos Buen Café y Comidas Saludables
               </h2>
               <p className="text-[#4F5665]">
-                You can explore the menu that we provide with fun and have their
-                own taste and make your day better.
+              Nuestras Bebidas saludables están hechas con ingredientes de alta calidad.
+              Puedes solicitar los ingredientes que deseas en tu pedido.
               </p>
               <ul className="flex flex-col max-w-md space-y-1 text-[#4F5665] list-inside gap-4">
                 {this.state.provide.map((text, idx) => (
@@ -132,11 +130,12 @@ class Mainpage extends Component {
           <section className="global-px py-8 md:py-20">
             <div className="flex flex-col items-center">
               <h2 className="text-4xl text-quartenary font-semibold mb-5 text-center">
-                Here is People’s Favorite
+              Aquí tienes algunas sugerencias de los favoritos de la gente
               </h2>
               <p className="text-base text-gray-700 text-center">
-                Let’s choose and have a bit taste of poeple’s favorite. It might
-                be yours too!
+              obtener una experiencia de pedido más satisfactoria.
+              
+
               </p>
             </div>
             <div className="flex flex-row flex-wrap justify-center gap-12 mt-20">

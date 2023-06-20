@@ -5,7 +5,7 @@ import toast from "react-hot-toast";
 import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 
-import icon from "../../assets/donHenryCafe.svg";
+import icon from "../../assets/donHenryCafe.png";
 import { profileAction } from "../../redux/slices/profile.slice";
 import { uinfoAct } from "../../redux/slices/userInfo.slice";
 import { login } from "../../utils/dataProvider/auth";

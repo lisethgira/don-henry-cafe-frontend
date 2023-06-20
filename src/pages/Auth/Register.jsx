@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { toast } from "react-hot-toast";
 import { Link, useNavigate } from "react-router-dom";
 
-import icon from "../../assets/donHenryCafe.svg";
+import icon from "../../assets/donHenryCafe.png";
 import { register } from "../../utils/dataProvider/auth";
 import useDocumentTitle from "../../utils/documentTitle";
 

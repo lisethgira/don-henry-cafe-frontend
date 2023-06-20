@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import fbLogo from '../assets/icons/facebook.svg';
 import igLogo from '../assets/icons/instagram.svg';
 import twLogo from '../assets/icons/twitter.svg';
-import logo from '../assets/donHenryCafe.svg';
+import logo from '../assets/donHenryCafe.png';
 
 class Footer extends Component {
   render() {

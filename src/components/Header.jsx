@@ -14,7 +14,7 @@ import {
 import burgerIcon from "../assets/icons/burger-menu-left.svg";
 import chatIcon from "../assets/icons/chat.svg";
 import placeholderProfile from "../assets/images/placeholder-profile.jpg";
-import logo from "../assets/donHenryCafe.svg";
+import logo from "../assets/donHenryCafe.png";
 import { contextAct } from "../redux/slices/context.slice";
 import { profileAction } from "../redux/slices/profile.slice";
 import { uinfoAct } from "../redux/slices/userInfo.slice";
@@ -228,17 +228,17 @@ class Header extends Component {
                     isActive ? "font-bold text-[#6A4029]" : ""
                   }
                 >
-                  Home
+                  Inicio
                 </NavLink>
               </li>
-              <li className="list-none" key="Product">
+              <li className="list-none" key="Productos">
                 <NavLink
                   to="/products"
                   className={({ isActive }) =>
                     isActive ? "font-bold text-[#6A4029]" : ""
                   }
                 >
-                  Products
+                  Productos
                 </NavLink>
               </li>
               <li className="list-none" key="Cart">
@@ -248,7 +248,7 @@ class Header extends Component {
                     isActive ? "font-bold text-[#6A4029]" : ""
                   }
                 >
-                  Your Cart
+                  Tu pedido
                 </NavLink>
               </li>
               <li className="list-none" key="History">
@@ -258,7 +258,7 @@ class Header extends Component {
                     isActive ? "font-bold text-[#6A4029]" : ""
                   }
                 >
-                  History
+                  Eventos
                 </NavLink>
               </li>
             </nav>
@@ -465,11 +465,11 @@ class Header extends Component {
             ) : (
               <div className="hidden lg:flex flex-row gap-3 items-center select-none py-6">
                 <Link to="/auth/login" className="mr-9 font-semibold">
-                  Login
+                  Iniciar sesion
                 </Link>
                 <Link to="/auth/register">
                   <button className="rounded-[25px] bg-secondary px-10 text-tertiary font-semibold py-2 hover:bg-secondary-200 duration-300">
-                    Sign Up
+                   Registrate
                   </button>
                 </Link>
               </div>
