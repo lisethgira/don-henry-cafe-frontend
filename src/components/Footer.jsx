@@ -22,8 +22,7 @@ class Footer extends Component {
                 </div>
               </Link>
               <div className="md:w-96">
-                Don Henry Café is a store that sells some good meals, and especially
-                coffee. We provide high quality beans
+              Don Henry Café es una tienda que vende una buena comida, y especialmente café. Brindamos alta calidad
               </div>
               <div className="flex flex-row gap-5">
                 <a
@@ -60,7 +59,8 @@ class Footer extends Component {
                       rel="noopener noreferrer"
                     >
                       {" "}
-                      Download
+                      
+                        Descargar
                     </a>
                   </div>
                   <div className="grid-item">
@@ -69,7 +69,7 @@ class Footer extends Component {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Pricing
+                      Precios
                     </a>
                   </div>
                   <div className="grid-item">
@@ -78,7 +78,8 @@ class Footer extends Component {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Locations
+                      Ubicaciones
+
                     </a>
                   </div>
                   <div className="grid-item">
@@ -87,7 +88,7 @@ class Footer extends Component {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Countries
+                      
                     </a>
                   </div>
                   <div className="grid-item">
@@ -112,7 +113,7 @@ class Footer extends Component {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Coffee Shop ?
+                      Cafetería 
                     </a>
                   </div>
                   <div className="grid-item">
@@ -130,7 +131,7 @@ class Footer extends Component {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      About Us
+                      Sobre nosotros
                     </a>
                   </div>
                   <div className="grid-item">
@@ -139,7 +140,7 @@ class Footer extends Component {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Privacy Policy
+                      política de privacidad
                     </a>
                   </div>
                   <div className="grid-item">
@@ -148,7 +149,7 @@ class Footer extends Component {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Terms of Services
+                      Términos de servicios
                     </a>
                   </div>
                 </div>

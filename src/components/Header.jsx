@@ -402,7 +402,7 @@ class Header extends Component {
                     {this.state.isDropdownOpen && (
                       <nav className="absolute list-none bg-white rounded-lg shadow-md border-1 border-gray-200 flex flex-col right-0 top-10 py-2 divide-y-1 transition-all duration-200 transform origin-top-right min-w-[14rem]">
                         <div className="px-4 py-1">
-                          <p>Signed in as</p>
+                          <p>Registrado como</p>
                           <p className="font-medium">
                             {this.limitCharacters(getUserData().email)}
                           </p>
@@ -412,7 +412,7 @@ class Header extends Component {
                             className="block px-4 py-2 hover:bg-gray-100  duration-200"
                             to="/profile/"
                           >
-                            Profile
+                            Perfil
                           </NavLink>
                           {/* <a
                           className="block px-4 py-2 hover:bg-gray-100 duration-200"
@@ -427,25 +427,28 @@ class Header extends Component {
                               className="block px-4 py-2 hover:bg-gray-100  duration-200"
                               to="/admin"
                             >
-                              Admin Dashboard
+                              Panel de administración
                             </NavLink>
                             <NavLink
                               className="block px-4 py-2 hover:bg-gray-100  duration-200"
                               to="/manage-order"
                             >
-                              Manage Order
+                              Administrar pedido
+
                             </NavLink>
                             <NavLink
                               className="block px-4 py-2 hover:bg-gray-100  duration-200"
                               to="/products/new"
                             >
-                              Add Product
+                              Agregar producto
+
                             </NavLink>
                             <NavLink
                               className="block px-4 py-2 hover:bg-gray-100  duration-200"
                               to="/promo/new"
                             >
-                              Add Promo
+                              Añadir promoción
+
                             </NavLink>
                           </div>
                         )}
@@ -454,7 +457,8 @@ class Header extends Component {
                             className="block px-4 py-2 hover:bg-gray-100 duration-200 cursor-pointer"
                             onClick={this.logoutHandler}
                           >
-                            Sign out
+                            desconectar
+
                           </a>
                         </div>
                       </nav>

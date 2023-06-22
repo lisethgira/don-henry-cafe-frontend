@@ -22,8 +22,7 @@ const AuthFooter = () => {
                 </div>
               </Link>
               <div className="">
-                Don Henry Café is a store that sells some good meals, and especially
-                coffee. We provide high quality beans
+              Don Henry Café es una tienda que vende buena comida, y sobre todo café.
               </div>
               <div className="flex flex-row gap-5">
                 <a

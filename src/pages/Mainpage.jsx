@@ -150,24 +150,24 @@ class Mainpage extends Component {
                     width="140px"
                     className="rounded-full mb-7"
                   />
-                  <h3 className="text-lg font-medium">Hazelnut Latte</h3>
+                  <h3 className="text-lg font-medium">capuchino vienes</h3>
                   <ul className="flex flex-col gap-5 mb-8 md:mb-20">
                     <li className="flex items-center gap-4">
-                      <img src={checkIcon} alt="" /> Hazelnut Syrup
+                      <img src={checkIcon} alt="" /> 
                     </li>
                     <li className="flex items-center gap-4">
-                      <img src={checkIcon} alt="" /> Wanilla Whipped Cream
+                      <img src={checkIcon} alt="" />
                     </li>
                     <li className="flex items-center gap-4">
-                      <img src={checkIcon} alt="" /> Ice / Hot
+                      <img src={checkIcon} alt="" /> 
                     </li>
                     <li className="flex items-center gap-4">
-                      <img src={checkIcon} alt="" /> Sliced Banana on Top
+                      <img src={checkIcon} alt="" /> 
                     </li>
                   </ul>
-                  <p className="font-medium text-2xl">IDR 25.000</p>
+                  <p className="font-medium text-2xl"></p>
                   <button className="bg-secondary text-tertiary px-9 py-3 rounded-3xl font-bold">
-                    Order Now
+                    Compra
                   </button>
                 </div>
               ))}
@@ -176,13 +176,15 @@ class Mainpage extends Component {
           <section className="global-px py-8 md:py-20">
             <div className="flex flex-col items-center mb-8 md:mb-20">
               <h2 className="text-4xl text-quartenary font-semibold mb-5 text-center">
-                Visit Our Store in
+              Visita Nuestra Tienda
                 <br />
-                the Spot on the Map Below
+                
               </h2>
               <p className="text-base text-gray-700 text-center">
-                See our store in every city on the spot and spen your good day
-                there. See you soon!
+              Visita Nuestra Tienda en el lugar en el mapa a continuación pase su buen día allí. ¡Nos vemos pronto!
+                    
+                    
+                
               </p>
             </div>
             <div className="mt-10">
@@ -192,11 +194,11 @@ class Mainpage extends Component {
           <section className="global-px py-8 md:py-20">
             <div className="flex flex-col items-center mb-8 md:mb-20">
               <h2 className="text-4xl text-quartenary font-semibold mb-5 text-center">
-                Our Partner
+              ¡Descubre HenryCafé
               </h2>
             </div>
             <div className="flex flex-row flex-wrap justify-center items-center gap-4 md:gap-12 ">
-              <img
+              {/*<img
                 src={netflixLogo}
                 alt=""
                 width="100px"
@@ -220,23 +222,22 @@ class Mainpage extends Component {
                 width="100px"
                 className="lg:w-[15%] aspect-[3/2] object-contain grayscale opacity-20 duration-300 hover:filter-none hover:opacity-100"
               />
-              <img
+             {/* <img
                 src={spotifyLogo}
                 alt=""
                 width="100px"
-                className="lg:w-[15%] aspect-[3/2] object-contain grayscale opacity-20 duration-300 hover:filter-none hover:opacity-100"
-              />
+                className="lg:w-[15%] aspect-[3/2] object-contain grayscale opacity-20 duration-300 hover:filter-none hover:opacity-100"*/}
+              
             </div>
           </section>
           <section className="global-px py-8 md:py-20">
             <div className="flex flex-col items-center mb-8 md:mb-20 text-center">
               <h2 className="text-3xl md:text-[35px] text-quartenary font-semibold mb-5">
-                Loved by Customer of
-                <br /> Happy Customer
+              Visítanos hoy y disfruta de la combinación perfecta 
+                <br /> 
               </h2>
               <p className="text-[1rem] text-center max-w-[555px] text-primary">
-                These are the stories of our customers who have visited us with
-                great pleasure.
+              Estas son las historias de nuestros clientes que nos han visitado con mucho gusto.
               </p>
             </div>
             <div className="overflow-auto flex flex-row gap-5 flex-wrap lg:flex-nowrap ">
@@ -256,7 +257,7 @@ class Mainpage extends Component {
                         <p className="font-semibold text-quartenary text-lg">
                           {review.name}
                         </p>
-                        <p className="text-primary text-sm">Warsaw, Poland</p>
+                        <p className="text-primary text-sm"></p>
                       </div>
                       <div className="flex flex-row items-center gap-2">
                         4.5 <img src={starIcon} alt="" />
@@ -271,15 +272,15 @@ class Mainpage extends Component {
           <section className="global-px z-10 relative w-full mb-6 md:mb-[-6rem]">
             <div className="shadow-primary rounded-xl flex flex-col md:flex-row py-10 md:py-14 px-8 md:px-16 bg-white text-center md:text-left">
               <aside className="flex-1 space-y-4 mb-5 md:mb-0">
-                <p className="text-3xl font-semibold">Check our promo today!</p>
+                <p className="text-3xl font-semibold">¡Consulta nuestra promoción de hoy!</p>
                 <p className="text-primary">
-                  Let&apos;s see the deals and pick yours
+                  &apos; mira las ofertas y elige la tuya
                 </p>
               </aside>
               <aside className="hidden lg:block lg:flex-1"></aside>
               <aside className="flex-1 flex flex-col justify-center">
                 <button className="ml-auto w-[100%] md:w-[75%]  bg-secondary rounded-xl py-4 text-tertiary font-bold">
-                  See promo
+                Ver promoción
                 </button>
               </aside>
             </div>
