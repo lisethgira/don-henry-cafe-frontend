@@ -131,11 +131,11 @@ function Products(props) {
 
       <main className="flex flex-col-reverse md:flex-row global-px">
         <section className="flex-1 flex flex-col items-center gap-5 py-5 md:border-r-2 border-solid md:pr-6">
-          <h2 className="font-bold text-2xl">Promo Today</h2>
+          <h2 className="font-bold text-2xl">Promocion hoy </h2>
           <p className="text-center">
-            Coupons will be updated every weeks.
+          Los cupones se actualizarán cada semana.
             <br />
-            Check them out!
+            ¡Échales un vistazo!
           </p>
           <div className="flex flex-col justify-center gap-5">
             {promoLoad ? (
@@ -148,9 +148,9 @@ function Products(props) {
             ) : promo.length < 1 ? (
               <div className="flex flex-col text-center">
                 <img src={illustrationsPromo} width={200} />
-                <p className="text-tertiary font-semibold">No promo today</p>
+                <p className="text-tertiary font-semibold">No hay promoción hoy</p>
                 <p className="text-black font-medium text-sm">
-                  Dont worry, check tommorow
+                no te preocupes consulta mañana
                 </p>
               </div>
             ) : (
@@ -211,7 +211,7 @@ function Products(props) {
                 to="/products"
                 end
               >
-                Favorite & Promo
+                Favorito y promoción
               </NavLink>
             </li>
             <li>
@@ -224,7 +224,7 @@ function Products(props) {
                 }
                 to="category/1"
               >
-                Coffee
+                Café
               </NavLink>
             </li>
             <li>
@@ -237,7 +237,7 @@ function Products(props) {
                 }
                 to="category/2"
               >
-                Non Coffee
+               descafeinado
               </NavLink>
             </li>
             <li>
@@ -250,7 +250,7 @@ function Products(props) {
                 }
                 to="category/3"
               >
-                Foods
+                Alimentos
               </NavLink>
             </li>
             <li>
@@ -263,7 +263,8 @@ function Products(props) {
                 }
                 to="category/4"
               >
-                Add-on
+                
+                Añadir
               </NavLink>
             </li>
             <li className="relative">
@@ -288,7 +289,7 @@ function Products(props) {
                       htmlFor="searchProduct"
                       className="block mb-2 text-sm font-medium text-gray-900"
                     >
-                      Keywords
+                      Palabras clave
                     </label>
                     <input
                       type="text"
@@ -304,7 +305,7 @@ function Products(props) {
                       htmlFor="orderBy"
                       className="block mb-2 text-sm font-medium text-gray-900"
                     >
-                      Order by
+                      ordenar por
                     </label>
                     <select
                       id="orderBy"
@@ -351,7 +352,7 @@ function Products(props) {
           </Routes>
 
           <section className="my-6 text-tertiary">
-            *the price has been cutted by discount appears
+          el precio ha sido recortado por descuento aparece
           </section>
           {Number(props.userInfo.role) > 1 && (
             <div className="mt-auto flex w-full">

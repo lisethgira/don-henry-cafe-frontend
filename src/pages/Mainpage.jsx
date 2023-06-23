@@ -12,16 +12,19 @@ import loveIcon from '../assets/icons/love.svg';
 import placeIcon from '../assets/icons/place.svg';
 import starIcon from '../assets/icons/star.svg';
 import staffIcon from '../assets/icons/user.svg';
-import mapImage from '../assets/images/global.svg';
+import mapImage from '../assets/images/centrocomercial.jpg';
 import amazonLogo from '../assets/images/partners/amazon.svg';
 import discordLogo from '../assets/images/partners/discord.svg';
 import netflixLogo from '../assets/images/partners/netflix.svg';
 import redditLogo from '../assets/images/partners/reddit.svg';
 import spotifyLogo from '../assets/images/partners/spotify.svg';
 import phProfile from '../assets/images/placeholder-profile.jpg';
-import productImage1 from '../assets/images/product-1.webp';
+import productImage1 from '../assets/images/malteada.jpg';
+import productImage2 from '../assets/images/cafe.jpeg';
+import productImage3 from '../assets/images/cafegrano.jpeg';
+
 // assets images
-import provideImage from '../assets/images/team-work.webp';
+import provideImage from '../assets/images/CLIENTAMETICHE.jpeg';
 // components
 import Footer from '../components/Footer';
 import Header from '../components/Header';
@@ -29,23 +32,23 @@ import Header from '../components/Header';
 class Mainpage extends Component {
   state = {
     provide: [
-      "High quality beans",
-      "Healthy meals, you can request the ingredients",
-      "Chat with our staff to get better experience for ordering",
-      "Free member card with a minimum purchase of IDR 200.000.",
+      "Café de granos de alta calidad",
+      "Comidas saludables, puedes solicitar los ingredientes",
+      "Chatea con nuestro personal para obtener una mejor experiencia al hacer pedidos",
+      
     ],
     reviews: [
       {
-        name: "Foo Barr",
-        text: "Wow... I am very happy to spend my whole day here. the Wi-fi is good, and the coffee and meals tho. I like it here!! Very recommended!",
+        name: "Fredy",
+        text: "Guau... Estoy muy feliz de pasar todo el día aquí. el Wi-fi es bueno, y el café y las comidas aunque. ¡¡Me gusta aquí!! ¡Muy recomendado!",
       },
       {
-        name: "Yessica Christy",
-        text: "I like it because I like to travel far and still can make my day better just by drinking their Hazelnut Latte",
+        name: "Yessica",
+        text: "Me gusta porque me gusta viajar lejos y todavía puedo mejorar mi día simplemente bebiendo su capuchino Latte",
       },
       {
-        name: "Kim Young Jou",
-        text: "This is very unusual for my taste, I haven’t liked coffee before but their coffee is the best! and yup, you have to order the chicken wings, the best in town",
+        name: "Jaime Salazar",
+        text: "Esto es muy inusual para mi gusto, no me ha gustado el café antes, ¡pero su café es el mejor!",
       },
     ],
   };
@@ -58,53 +61,20 @@ class Mainpage extends Component {
             <div className="global-px">
               <div className="flex flex-col gap-6 w-[75%] lg:w-[50%] text-sm">
                 <h2 className="text-4xl font-bold">
-                  Start Your Day with Coofee and Good Meals
+                  Inicia tu día con un buen cafe!  
                 </h2>
                 <p>
-                  We provide high quality beans, good taste, and healthy meals
-                  made by love just for you. Start your day with us for a bigger
-                  smile!
+                Ofrecemos alta calidad, buen gusto y comidas saludables hechas con amor solo para ti.
                 </p>
                 <div className="mt-5">
                   <Link
                     className="bg-secondary px-6 py-4 text-[#6A4029] rounded-xl"
                     to={"/products/"}
                   >
-                    Get Started
+                    Haz tu compra!
                   </Link>
                 </div>
               </div>
-              <section className="relative bg-white mt-20 mb-[-9rem] rounded-xl shadow-xl text-quartenary flex flex-row py-5 justify-center items-center text-center md:text-left">
-                <aside className="flex-1 border-r-2 py-2 md:py-6 flex flex-col md:flex-row justify-center gap-3 md:gap-8 items-center">
-                  <div>
-                    <div className="bg-secondary rounded-full p-2 w-10 aspect-square flex justify-center items-center">
-                      <img src={staffIcon} alt="" />
-                    </div>
-                  </div>
-                  <div>
-                    <p className="text-md lg:text-xl">90+</p>
-                    <p className="font-normal text-primary">Staff</p>
-                  </div>
-                </aside>
-                <aside className="flex-1 border-r-2 py-2 md:py-6 flex flex-col md:flex-row justify-center gap-3 md:gap-8 items-center">
-                  <div className="bg-secondary rounded-full p-2 w-10 aspect-square flex justify-center items-center">
-                    <img src={loveIcon} alt="" />
-                  </div>
-                  <div>
-                    <p className="text-md lg:text-xl">800+</p>
-                    <p className="font-normal text-primary">Customers</p>
-                  </div>
-                </aside>
-                <aside className="flex-1 py-2 md:py-6 flex flex-col md:flex-row justify-center gap-3 md:gap-8 items-center">
-                  <div className="bg-secondary rounded-full p-2 w-10 aspect-square flex justify-center items-center">
-                    <img src={placeIcon} alt="" />
-                  </div>
-                  <div>
-                    <p className="text-md lg:text-xl">30+</p>
-                    <p className="font-normal text-primary">Stores</p>
-                  </div>
-                </aside>
-              </section>
             </div>
           </section>
           <div className="mb-8 md:mb-20"></div>
@@ -114,11 +84,11 @@ class Mainpage extends Component {
             </div>
             <div className="flex-1 flex flex-col justify-center gap-5">
               <h2 className="text-quartenary font-semibold text-[35px]">
-                We Provide Good Coffee and Healthy Meals
+              Brindamos Buen Café y Comidas Saludables
               </h2>
               <p className="text-[#4F5665]">
-                You can explore the menu that we provide with fun and have their
-                own taste and make your day better.
+              Nuestras Bebidas saludables están hechas con ingredientes de alta calidad.
+              Puedes solicitar los ingredientes que deseas en tu pedido.
               </p>
               <ul className="flex flex-col max-w-md space-y-1 text-[#4F5665] list-inside gap-4">
                 {this.state.provide.map((text, idx) => (
@@ -132,18 +102,18 @@ class Mainpage extends Component {
           <section className="global-px py-8 md:py-20">
             <div className="flex flex-col items-center">
               <h2 className="text-4xl text-quartenary font-semibold mb-5 text-center">
-                Here is People’s Favorite
+              Aquí tienes algunas sugerencias de los favoritos de la gente
               </h2>
               <p className="text-base text-gray-700 text-center">
-                Let’s choose and have a bit taste of poeple’s favorite. It might
-                be yours too!
+              obtener una experiencia de pedido más satisfactoria.
+              
+
               </p>
-            </div>
+                  </div>
             <div className="flex flex-row flex-wrap justify-center gap-12 mt-20">
-              {Array("", "", "").map((item, idx) => (
-                <div
+            <div
                   className="flex-1 flex flex-col justify-center border-gray-400 border rounded-xl px-5 py-5 md:py-12 items-center gap-5 text-base"
-                  key={idx}
+                  
                 >
                   <img
                     src={productImage1}
@@ -151,93 +121,126 @@ class Mainpage extends Component {
                     width="140px"
                     className="rounded-full mb-7"
                   />
-                  <h3 className="text-lg font-medium">Hazelnut Latte</h3>
+                  <h3 className="text-lg font-medium">capuchino vienes</h3>
                   <ul className="flex flex-col gap-5 mb-8 md:mb-20">
-                    <li className="flex items-center gap-4">
-                      <img src={checkIcon} alt="" /> Hazelnut Syrup
+                    <li className="flex items-center gap-4">Energía y estimulación
+                      <img src={checkIcon} alt="" /> 
                     </li>
-                    <li className="flex items-center gap-4">
-                      <img src={checkIcon} alt="" /> Wanilla Whipped Cream
+                    <li className="flex items-center gap-4">Delicioso sabor
+                      <img src={checkIcon} alt="" />
                     </li>
-                    <li className="flex items-center gap-4">
-                      <img src={checkIcon} alt="" /> Ice / Hot
+                    <li className="flex items-center gap-4">Aporte nutricional
+                      <img src={checkIcon} alt="" /> 
                     </li>
-                    <li className="flex items-center gap-4">
-                      <img src={checkIcon} alt="" /> Sliced Banana on Top
+                    <li className="flex items-center gap-4">Placer y bienestar emocional
+                      <img src={checkIcon} alt="" /> 
                     </li>
                   </ul>
-                  <p className="font-medium text-2xl">IDR 25.000</p>
+                  <p className="font-medium text-2xl"></p>
                   <button className="bg-secondary text-tertiary px-9 py-3 rounded-3xl font-bold">
-                    Order Now
+                    Compra
                   </button>
                 </div>
-              ))}
+                <div
+                  className="flex-1 flex flex-col justify-center border-gray-400 border rounded-xl px-5 py-5 md:py-12 items-center gap-5 text-base"
+                  
+                >
+                  <img
+                    src={productImage2}
+                    alt=""
+                    width="140px"
+                    className="rounded-full mb-7"
+                  />
+                  <h3 className="text-lg font-medium">capuchino vienes</h3>
+                  <ul className="flex flex-col gap-5 mb-8 md:mb-20">
+                    <li className="flex items-center gap-4">Energía y estimulación
+                      <img src={checkIcon} alt="" /> 
+                    </li>
+                    <li className="flex items-center gap-4">Delicioso sabor
+                      <img src={checkIcon} alt="" />
+                    </li>
+                    <li className="flex items-center gap-4">Aporte nutricional
+                      <img src={checkIcon} alt="" /> 
+                    </li>
+                    <li className="flex items-center gap-4">Placer y bienestar emocional
+                      <img src={checkIcon} alt="" /> 
+                    </li>
+                  </ul>
+                  <p className="font-medium text-2xl"></p>
+                  <button className="bg-secondary text-tertiary px-9 py-3 rounded-3xl font-bold">
+                    Compra
+                  </button>
+                </div>
+                <div
+                  className="flex-1 flex flex-col justify-center border-gray-400 border rounded-xl px-5 py-5 md:py-12 items-center gap-5 text-base"
+                  
+                >
+                  <img
+                    src={productImage3}
+                    alt=""
+                    width="140px"
+                    className="rounded-full mb-7"
+                  />
+                  <h3 className="text-lg font-medium">capuchino vienes</h3>
+                  <ul className="flex flex-col gap-5 mb-8 md:mb-20">
+                    <li className="flex items-center gap-4">Energía y estimulación
+                      <img src={checkIcon} alt="" /> 
+                    </li>
+                    <li className="flex items-center gap-4">Delicioso sabor
+                      <img src={checkIcon} alt="" />
+                    </li>
+                    <li className="flex items-center gap-4">Aporte nutricional
+                      <img src={checkIcon} alt="" /> 
+                    </li>
+                    <li className="flex items-center gap-4">Placer y bienestar emocional
+                      <img src={checkIcon} alt="" /> 
+                    </li>
+                  </ul>
+                  <p className="font-medium text-2xl"></p>
+                  <button className="bg-secondary text-tertiary px-9 py-3 rounded-3xl font-bold">
+                    Compra
+                  </button>
+                </div>
             </div>
           </section>
           <section className="global-px py-8 md:py-20">
             <div className="flex flex-col items-center mb-8 md:mb-20">
               <h2 className="text-4xl text-quartenary font-semibold mb-5 text-center">
-                Visit Our Store in
+              Visita Nuestra Tienda
                 <br />
-                the Spot on the Map Below
+                
               </h2>
               <p className="text-base text-gray-700 text-center">
-                See our store in every city on the spot and spen your good day
-                there. See you soon!
+              Visita Nuestra Tienda en el lugar en el mapa a continuación pase su buen día allí. ¡Nos vemos pronto!
+              
+                                    Dirección: Cl. 30A #82A-26, Medellín, Belén, Medellín, Antioquia
+              
+              
+                    
+                    
+                
               </p>
             </div>
             <div className="mt-10">
               <img src={mapImage} alt="global map" />
             </div>
           </section>
-          <section className="global-px py-8 md:py-20">
-            <div className="flex flex-col items-center mb-8 md:mb-20">
-              <h2 className="text-4xl text-quartenary font-semibold mb-5 text-center">
-                Our Partner
+          <section className="global-px py-2 md:py-4">
+            <div className="flex flex-col items-center mb-2 md:mb-4">
+              <h2 className="text-4xl text-quartenary font-semibold  text-center">
+              ¡Descubre Don Henry Café!
               </h2>
             </div>
-            <div className="flex flex-row flex-wrap justify-center items-center gap-4 md:gap-12 ">
-              <img
-                src={netflixLogo}
-                alt=""
-                width="100px"
-                className="lg:w-[15%] aspect-[3/2] object-contain grayscale opacity-20 duration-300 hover:filter-none hover:opacity-100"
-              />
-              <img
-                src={redditLogo}
-                alt=""
-                width="100px"
-                className="lg:w-[15%] aspect-[3/2] object-contain grayscale opacity-20 duration-300 hover:filter-none hover:opacity-100"
-              />
-              <img
-                src={amazonLogo}
-                alt=""
-                width="100px"
-                className="lg:w-[15%] aspect-[3/2] object-contain grayscale opacity-20 duration-300 hover:filter-none hover:opacity-100"
-              />
-              <img
-                src={discordLogo}
-                alt=""
-                width="100px"
-                className="lg:w-[15%] aspect-[3/2] object-contain grayscale opacity-20 duration-300 hover:filter-none hover:opacity-100"
-              />
-              <img
-                src={spotifyLogo}
-                alt=""
-                width="100px"
-                className="lg:w-[15%] aspect-[3/2] object-contain grayscale opacity-20 duration-300 hover:filter-none hover:opacity-100"
-              />
-            </div>
+            
           </section>
           <section className="global-px py-8 md:py-20">
             <div className="flex flex-col items-center mb-8 md:mb-20 text-center">
               <h2 className="text-3xl md:text-[35px] text-quartenary font-semibold mb-5">
-                Loved by Customer of
-                <br /> Happy Customer
+              Visítanos hoy y disfruta de la combinación perfecta 
+                <br /> 
               </h2>
               <p className="text-[1rem] text-center max-w-[555px] text-primary">
-                These are the stories of our customers who have visited us with
-                great pleasure.
+              Estas son las historias de nuestros clientes que nos han visitado con mucho gusto.
               </p>
             </div>
             <div className="overflow-auto flex flex-row gap-5 flex-wrap lg:flex-nowrap ">
@@ -257,7 +260,7 @@ class Mainpage extends Component {
                         <p className="font-semibold text-quartenary text-lg">
                           {review.name}
                         </p>
-                        <p className="text-primary text-sm">Warsaw, Poland</p>
+                        <p className="text-primary text-sm"></p>
                       </div>
                       <div className="flex flex-row items-center gap-2">
                         4.5 <img src={starIcon} alt="" />
@@ -272,15 +275,15 @@ class Mainpage extends Component {
           <section className="global-px z-10 relative w-full mb-6 md:mb-[-6rem]">
             <div className="shadow-primary rounded-xl flex flex-col md:flex-row py-10 md:py-14 px-8 md:px-16 bg-white text-center md:text-left">
               <aside className="flex-1 space-y-4 mb-5 md:mb-0">
-                <p className="text-3xl font-semibold">Check our promo today!</p>
+                <p className="text-3xl font-semibold">¡Consulta nuestra promoción de hoy!</p>
                 <p className="text-primary">
-                  Let&apos;s see the deals and pick yours
+                  &apos; Mira las ofertas y elige la tuya¨
                 </p>
               </aside>
               <aside className="hidden lg:block lg:flex-1"></aside>
               <aside className="flex-1 flex flex-col justify-center">
                 <button className="ml-auto w-[100%] md:w-[75%]  bg-secondary rounded-xl py-4 text-tertiary font-bold">
-                  See promo
+                Ver promoción
                 </button>
               </aside>
             </div>

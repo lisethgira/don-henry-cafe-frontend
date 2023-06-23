@@ -86,7 +86,7 @@ const AdminDashboard = (props) => {
       <main className="bg-[#F0F0F0]">
         <section className="flex flex-col global-px py-4 md:py-8">
           <p className="text-center text-tertiary font-bold text-2xl">
-            See how your store progress so far
+          Vea cómo ha progresado su tienda hasta ahora
           </p>
           <div className="flex gap-12 justify-center pt-5">
             <div
@@ -131,7 +131,7 @@ const AdminDashboard = (props) => {
                   view !== "weekly" && view !== "daily" && "font-bold"
                 }`}
               >
-                Monthly
+                Mensual
               </p>
             </div>
           </div>

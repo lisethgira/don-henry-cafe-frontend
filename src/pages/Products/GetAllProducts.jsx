@@ -125,9 +125,10 @@ function GetAllProducts(props) {
           </div>
           <div>
             <p>
-              We&apos;re sorry, it seems our products have gone into hiding.
+            
+              nosotros Lo siento, parece que nuestros productos se han ocultado.
             </p>
-            <p>We&apos;ll try to coax them out soon.</p>
+            <p>Intentaremos sacarlos pronto.</p>
           </div>
         </section>
       );

@@ -4,7 +4,7 @@ import { now } from "lodash";
 import toast from "react-hot-toast";
 import { Link } from "react-router-dom";
 
-import icon from "../../assets/donHenryCafe.svg";
+import icon from "../../assets/donHenryCafe.png";
 import { forgotPass } from "../../utils/dataProvider/auth";
 import useDocumentTitle from "../../utils/documentTitle";
 

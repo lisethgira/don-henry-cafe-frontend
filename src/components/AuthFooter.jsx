@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import fbLogo from '../assets/icons/facebook.svg';
 import igLogo from '../assets/icons/instagram.svg';
 import twLogo from '../assets/icons/twitter.svg';
-import logo from '../assets/donHenryCafe.svg';
+import logo from '../assets/donHenryCafe.png';
 
 const AuthFooter = () => {
   return (
@@ -22,8 +22,7 @@ const AuthFooter = () => {
                 </div>
               </Link>
               <div className="">
-                Don Henry Café is a store that sells some good meals, and especially
-                coffee. We provide high quality beans
+              Don Henry Café es una tienda que vende buena comida, y sobre todo café.
               </div>
               <div className="flex flex-row gap-5">
                 <a
@@ -53,65 +52,65 @@ const AuthFooter = () => {
             <nav className="flex flex-row lg:flex-col gap-10 md:flex-1">
               <div className="flex-1 flex flex-col gap-5">
                 <div className="grid-item">
-                  <p className="font-bold">Product</p>
+                  <p className="font-bold"></p>
                 </div>
                 <div className="flex flex-col gap-2  lg:flex-row lg:gap-x-10 lg:gap-y-4 flex-wrap w-full">
                   <div className="grid-item flex-1">
                     <a href="#" target="_blank" rel="noopener noreferrer">
                       {" "}
-                      Download
+                      
                     </a>
                   </div>
                   <div className="grid-item flex-1">
                     <a href="#" target="_blank" rel="noopener noreferrer">
-                      Pricing
+                      
                     </a>
                   </div>
                   <div className="grid-item flex-1">
                     <a href="#" target="_blank" rel="noopener noreferrer">
-                      Locations
+                      
                     </a>
                   </div>
                   <div className="grid-item flex-1">
                     <a href="#" target="_blank" rel="noopener noreferrer">
-                      Countries
+                      
                     </a>
                   </div>
                   <div className="grid-item flex-1">
                     <a href="#" target="_blank" rel="noopener noreferrer">
-                      Blog
+                      
                     </a>
                   </div>
                 </div>
               </div>
               <div className="flex-1 flex flex-col gap-2">
                 <div className="grid-item">
-                  <p className="font-bold">Engage</p>
+                  <p className="font-bold"></p>
                 </div>
                 <div className="flex flex-col gap-2  lg:flex-row lg:gap-x-10 lg:gap-y-4 flex-wrap w-full text-base">
                   <div className="grid-item flex-1 min-w-[5rem]">
                     <a href="#" target="_blank" rel="noopener noreferrer">
-                      Coffee Shop?
+                      
                     </a>
                   </div>
                   <div className="grid-item flex-1 min-w-[5rem]">
                     <a href="#" target="_blank" rel="noopener noreferrer">
-                      FAQ
+                     
                     </a>
                   </div>
                   <div className="grid-item flex-1">
                     <a href="#" target="_blank" rel="noopener noreferrer">
-                      About Us
+                      
                     </a>
                   </div>
                   <div className="grid-item flex-1">
                     <a href="#" target="_blank" rel="noopener noreferrer">
-                      Privacy Policy
+                      
                     </a>
                   </div>
                   <div className="grid-item flex-1">
                     <a href="#" target="_blank" rel="noopener noreferrer">
-                      Terms of Services
+                      
                     </a>
                   </div>
                 </div>
