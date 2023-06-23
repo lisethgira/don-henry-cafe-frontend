@@ -258,7 +258,7 @@ class Header extends Component {
                     isActive ? "font-bold text-[#6A4029]" : ""
                   }
                 >
-                  Eventos
+                  Historia
                 </NavLink>
               </li>
             </nav>

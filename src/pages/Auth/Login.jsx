@@ -73,8 +73,8 @@ const Login = () => {
             }); // add toast welcome
             return (
               <>
-                Login successful!
-                <br /> Redirecting you
+                Inicio de sesión exitoso!
+                <br /> redirigiendote
               </>
             );
           },
@@ -244,7 +244,7 @@ const Login = () => {
               width="23px"
               className="w  -5 h-5 mr-2"
             />
-            <span>  Login Google</span>
+            <span>  ingresa con  Google</span>
           </button>
           <div className="inline-flex items-center justify-center w-full">
             <hr className="w-full h-px my-6 bg-gray-200 border-0 dark:bg-gray-700" />

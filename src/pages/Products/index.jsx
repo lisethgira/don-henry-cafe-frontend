@@ -107,7 +107,8 @@ function Products(props) {
     }
   }, [search]);
 
-  const fetchPromo = async () => {
+
+ const fetchPromo = async () => {
     try {
       setPromoLoad(true);
       const result = await getPromos({ page: 1 }, controller);
@@ -131,7 +132,7 @@ function Products(props) {
 
       <main className="flex flex-col-reverse md:flex-row global-px">
         <section className="flex-1 flex flex-col items-center gap-5 py-5 md:border-r-2 border-solid md:pr-6">
-          <h2 className="font-bold text-2xl">Promocion hoy </h2>
+          <h2 className="font-bold text-2xl">Promoción hoy</h2>
           <p className="text-center">
           Los cupones se actualizarán cada semana.
             <br />
@@ -187,13 +188,13 @@ function Products(props) {
               ))
             )}
           </div>
-          {Number(props.userInfo.role) > 1 && (
+ {Number(props.userInfo.role) > 1 && (
             <div className="mt-auto flex w-full">
               <button
                 onClick={() => navigate("/promo/new")}
                 className="btn btn-block btn-secondary text-tertiary font-bold normal-case"
               >
-                Add new promo
+                Añadir nueva promoción
               </button>
             </div>
           )}
@@ -237,7 +238,7 @@ function Products(props) {
                 }
                 to="category/2"
               >
-               descafeinado
+                Sin café
               </NavLink>
             </li>
             <li>
@@ -254,7 +255,7 @@ function Products(props) {
               </NavLink>
             </li>
             <li>
-              <NavLink
+<NavLink
                 className={({ isActive }) =>
                   isActive
                     ? "font-semibold text-tertiary border-b-2 border-tertiary pb-1 drop-shadow-lg"
@@ -263,8 +264,7 @@ function Products(props) {
                 }
                 to="category/4"
               >
-                
-                Añadir
+                Kit Cafetero
               </NavLink>
             </li>
             <li className="relative">
@@ -313,20 +313,20 @@ function Products(props) {
                       value={sort}
                       onChange={(e) => setSort(e.target.value)}
                     >
-                      <option value={undefined}>Choose a order</option>
-                      <option value="price_asc">Price (Asc)</option>
-                      <option value="price_desc">Price (Desc)</option>
-                      <option value="id_desc">Newest</option>
-                      <option value="id_asc">Oldest</option>
-                      <option value="category_asc">Category (Asc)</option>
-                      <option value="category_desc">Category (Desc)</option>
+                      <option value={undefined}>Elige un pedido</option>
+                      <option value="price_asc">Precio (Asc)</option>
+                      <option value="price_desc">Precio (Desc)</option>
+                      <option value="id_desc">El mas nuevo</option>
+                      <option value="id_asc">Más antiguo</option>
+                      <option value="category_asc">Categoría (Asc)</option>
+                      <option value="category_desc">Categoría(Desc)</option>
                     </select>
                   </aside>
                 </section>
               </div>
             </li>
           </nav>
-          <Routes path="/products/*">
+ <Routes path="/products/*">
             <Route
               index
               element={
@@ -352,7 +352,7 @@ function Products(props) {
           </Routes>
 
           <section className="my-6 text-tertiary">
-          el precio ha sido recortado por descuento aparece
+          El precio ha sido recortado por descuento aparece
           </section>
           {Number(props.userInfo.role) > 1 && (
             <div className="mt-auto flex w-full">
@@ -360,7 +360,7 @@ function Products(props) {
                 onClick={() => navigate("/products/new")}
                 className="btn btn-block btn-primary text-white font-bold normal-case"
               >
-                Add new product
+                Agregar nuevo producto
               </button>
             </div>
           )}

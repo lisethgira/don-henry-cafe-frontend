@@ -61,10 +61,10 @@ class Mainpage extends Component {
             <div className="global-px">
               <div className="flex flex-col gap-6 w-[75%] lg:w-[50%] text-sm">
                 <h2 className="text-4xl font-bold">
-                  Inicia tu día con un buen cafe!  
+                  Inicia tu día con un buen Café!  
                 </h2>
                 <p>
-                Ofrecemos alta calidad, buen gusto y comidas saludables hechas con amor solo para ti.
+                Ofrecemos alta calidad, buen gusto y comidas saludables hechas con amor solo para tí.
                 </p>
                 <div className="mt-5">
                   <Link
@@ -151,18 +151,18 @@ class Mainpage extends Component {
                     width="140px"
                     className="rounded-full mb-7"
                   />
-                  <h3 className="text-lg font-medium">capuchino vienes</h3>
+                  <h3 className="text-lg font-medium"> café irlandés</h3>
                   <ul className="flex flex-col gap-5 mb-8 md:mb-20">
-                    <li className="flex items-center gap-4">Energía y estimulación
+                    <li className="flex items-center gap-4">Placer y relajación
                       <img src={checkIcon} alt="" /> 
                     </li>
-                    <li className="flex items-center gap-4">Delicioso sabor
+                    <li className="flex items-center gap-4">Estimulante y energizante
                       <img src={checkIcon} alt="" />
                     </li>
-                    <li className="flex items-center gap-4">Aporte nutricional
+                    <li className="flex items-center gap-4">Calidez y confort
                       <img src={checkIcon} alt="" /> 
                     </li>
-                    <li className="flex items-center gap-4">Placer y bienestar emocional
+                    <li className="flex items-center gap-4">Experiencia sensorial únicacafé granulado
                       <img src={checkIcon} alt="" /> 
                     </li>
                   </ul>
@@ -181,18 +181,18 @@ class Mainpage extends Component {
                     width="140px"
                     className="rounded-full mb-7"
                   />
-                  <h3 className="text-lg font-medium">capuchino vienes</h3>
+                  <h3 className="text-lg font-medium">café granulado</h3>
                   <ul className="flex flex-col gap-5 mb-8 md:mb-20">
-                    <li className="flex items-center gap-4">Energía y estimulación
+                    <li className="flex items-center gap-4">Conveniencia y rapidez
                       <img src={checkIcon} alt="" /> 
                     </li>
-                    <li className="flex items-center gap-4">Delicioso sabor
+                    <li className="flex items-center gap-4">Durabilidad y almacenamiento
                       <img src={checkIcon} alt="" />
                     </li>
-                    <li className="flex items-center gap-4">Aporte nutricional
+                    <li className="flex items-center gap-4">Portabilidad
                       <img src={checkIcon} alt="" /> 
                     </li>
-                    <li className="flex items-center gap-4">Placer y bienestar emocional
+                    <li className="flex items-center gap-4">Versatilidad en la preparación
                       <img src={checkIcon} alt="" /> 
                     </li>
                   </ul>

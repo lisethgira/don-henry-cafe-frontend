@@ -120,16 +120,16 @@ function ResetPass() {
           >
             <div className="space-y-5">
               <h2 className="font-bold text-3xl text-center">
-                Forgot your password?
+              ¿Olvidaste tu contraseña?
               </h2>
               <p className="text-xl text-center">
-                Don’t worry, we got your back!
+              ¡No te preocupes, te respaldamos!
               </p>
             </div>
             <div>
               <p className="text-center">
-                You have requested a link to reset your password, please enter a
-                new password to access your account
+              Ha solicitado un enlace para restablecer su contraseña, por favor ingrese un
+                nueva contraseña para acceder a su cuenta
               </p>
               <input
                 type="password"
@@ -139,7 +139,7 @@ function ResetPass() {
                   `border-gray-400 border-2 rounded-2xl p-3 w-full mt-2` +
                   (error !== "" ? " border-red-500" : "")
                 }
-                placeholder="Enter your new password"
+                placeholder="Introduzca su nueva contraseña"
                 value={pass}
                 onChange={handleChange}
               />
@@ -151,7 +151,7 @@ function ResetPass() {
                 className="w-full text-tertiary bg-secondary focus:ring-4 focus:outline-none focus:ring-primary-300 font-bold rounded-2xl text-lg p-3 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 shadow-xl mt-4"
                 onClick={resetPassHandler}
               >
-                Send
+                Enviar
               </button>
             </div>
           </form>

@@ -177,7 +177,7 @@ function Profile() {
   const ActionList = () => (
     <div className="flex flex-col items-center">
       <p className="text-tertiary text-xl mb-4 text-center font-bold">
-        Do you want to save the change?
+      ¿Quieres guardar el cambio?
       </p>
       <button
         className="bg-tertiary border-2  secondary py-4 w-[75%] rounded-2xl mb-3 text-white font-semibold text-xl shadow-lg disabled:cursor-not-allowed disabled:bg-gray-400"
@@ -185,7 +185,7 @@ function Profile() {
         onClick={saveHandler}
         disabled={(isEqual(form, data) && !selectedFile) || isProcess}
       >
-        Save Change
+        Guardar cambios
       </button>
       <button
         className="bg-secondary border-2  secondary py-4 w-[75%] rounded-2xl mb-3 text-tertiary font-semibold text-xl shadow-lg  disabled:cursor-not-allowed disabled:bg-gray-400 disabled:text-white"
@@ -195,7 +195,7 @@ function Profile() {
         Cancel
       </button>
       <button className="mt-10 bg-white border-2  secondary py-4 w-[75%] rounded-2xl mb-8 text-tertiary font-semibold shadow-lg">
-        Log out
+      Cerrar sesión
       </button>
     </div>
   );
@@ -211,7 +211,7 @@ function Profile() {
           <main className="bg-profile">
             <div className="global-px py-10 space-y-3">
               <section className="text-white text-2xl font-extrabold">
-                User Profile
+              Perfil del usuario
               </section>
               <section className="flex flex-col lg:flex-row bg-white rounded-2xl">
                 <section className="flex-1 flex flex-col items-center p-10">
@@ -239,20 +239,20 @@ function Profile() {
                     htmlFor="imageUp"
                     className="bg-secondary py-3 w-[75%] rounded-2xl mb-3 text-tertiary font-semibold shadow-lg text-center cursor-pointer"
                   >
-                    Choose photo
+                    Escoge una foto
                   </label>
                   <button
                     className="bg-tertiary disabled:bg-gray-400 secondary py-3 w-[75%] rounded-2xl mb-8 text-white font-semibold shadow-lg"
                     onClick={handleClearClick}
                     disabled={selectedFile ? false : true}
                   >
-                    Remove photo
+                    Quitar foto
                   </button>
                   <button
                     className="bg-white border-2  secondary py-4 w-[75%] rounded-2xl mb-8 text-tertiary font-semibold shadow-lg"
                     onClick={switchEpassModal}
                   >
-                    Edit Password
+                    Editar contraseña
                   </button>
                   <section className="hidden lg:block">
                     <ActionList />
@@ -276,7 +276,7 @@ function Profile() {
                     <div className="grid lg:grid-cols-[55%_35%] gap-x-5 gap-y-8 py-5">
                       <div className="flex flex-col">
                         <label htmlFor="email" className="text-[#9f9f9f]">
-                          Email Address
+                        Dirección de correo electrónico
                         </label>
                         <input
                           type="text"
@@ -290,7 +290,7 @@ function Profile() {
                       </div>
                       <div className="flex flex-col">
                         <label htmlFor="email" className="text-[#9f9f9f]">
-                          Mobile number
+                        Número de teléfono móvil
                         </label>
                         <input
                           type="text"
@@ -304,7 +304,7 @@ function Profile() {
                       </div>
                       <div className="flex flex-col">
                         <label htmlFor="email" className="text-[#9f9f9f]">
-                          Delivery Address
+                        Dirección de entrega
                         </label>
                         <input
                           type="text"
@@ -321,7 +321,7 @@ function Profile() {
                     <div className="grid lg:grid-cols-[55%_35%] gap-x-5 gap-y-8 py-5">
                       <div className="input-profile">
                         <label htmlFor="email" className="text-[#9f9f9f]">
-                          Display name
+                        Nombre para mostrar
                         </label>
                         <input
                           type="text"
@@ -335,7 +335,7 @@ function Profile() {
                       </div>
                       <div className="input-profile">
                         <label htmlFor="email" className="text-[#9f9f9f]">
-                          Birthdate
+                        Fecha de nacimiento
                         </label>
                         <input
                           type="date"
@@ -349,7 +349,7 @@ function Profile() {
                       </div>
                       <div className="input-profile">
                         <label htmlFor="email" className="text-[#9f9f9f]">
-                          First name
+                        nombre de pila
                         </label>
                         <input
                           type="text"
@@ -364,7 +364,7 @@ function Profile() {
                       <div className="input-profile hidden lg:block"></div>
                       <div className="input-profile">
                         <label htmlFor="email" className="text-[#9f9f9f]">
-                          Last name
+                        Apellido
                         </label>
                         <input
                           type="text"

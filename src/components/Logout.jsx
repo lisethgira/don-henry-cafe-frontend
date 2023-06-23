@@ -44,7 +44,7 @@ function Logout() {
   return (
     userInfo.token && (
       <Modal isOpen={context.logout} onClose={onClose}>
-        <p className="mb-4">Are you sure you want to logout?</p>
+        <p className="mb-4">¿Estás seguro de que quieres cerrar sesión?</p>
         <section className="flex flex-row gap-2">
           <button
             onClick={logoutHandler}
