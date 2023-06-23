@@ -92,10 +92,10 @@ const ForgotPass = () => {
         >
           <div className="space-y-5">
             <h2 className="font-bold text-3xl text-center">
-              Forgot your password?
+            ¿Olvidaste tu contraseña?
             </h2>
             <p className="text-xl text-center">
-              Don’t worry, we got your back!
+            ¡No te preocupes, te respaldamos!
             </p>
           </div>
           <div>
@@ -107,7 +107,7 @@ const ForgotPass = () => {
                 `border-gray-400 border-2 rounded-2xl p-3 w-full mt-2` +
                 (error !== "" ? " border-red-500" : "")
               }
-              placeholder="Enter your email adress to get link"
+              placeholder="Ingrese su dirección de correo electrónico para obtener el enlace"
               value={email}
               onChange={handleChange}
             />
@@ -120,18 +120,18 @@ const ForgotPass = () => {
             className="w-full text-tertiary bg-secondary focus:ring-4 focus:outline-none focus:ring-primary-300 font-bold rounded-2xl text-lg p-3 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 shadow-xl"
             onClick={forgotPassHandler}
           >
-            Send
+            Enviar
           </button>
         </form>
         {resend >= now() ? (
           <section className="text-center mt-10 space-y-2">
-            <p>Click here if you didn’t receive any link in 2 minutes</p>
+            <p>Haga clic aquí si no recibió ningún enlace en 2 minutos</p>
             <p className="font-bold">{displaycd}</p>
             <button
               type="submit"
               className="w-full text-white bg-tertiary focus:ring-4 focus:outline-none focus:ring-primary-300 font-bold rounded-2xl text-lg p-3 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 shadow-xl"
             >
-              Resend Link
+              Reenviar Link
             </button>
           </section>
         ) : (
