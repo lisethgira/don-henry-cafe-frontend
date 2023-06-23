@@ -1,14 +1,14 @@
 <div align="center">
-<img src="./public/assets/images/logo.png"/>
+<img style="width: 80px; border-radius:100px" src="./public/assets/images/logo.png"/>
 
 [![Tech Stack](https://skillicons.dev/icons?i=react,redux,tailwind,vercel)](#tech-stack)
 
-<h3 align="center"><b>Don Henry Café</b> - Example App</h3>
+<h3 align="center"><b>Don Henry Café</b> - App Example</h3>
    <p align="center">
    Open Source. Front-end.
    </p>
 
-[Demo](https://jokopi-react.vercel.app/) · [Related Projects](#related-projects) · [Request Feature](#report-bug)
+[Demo](https://donhenrycafe-react.vercel.app/) · [Related Projects](#related-projects) · [Request Feature](#report-bug)
 
 </div>
 
@@ -23,17 +23,17 @@
   - [Installation](#installation)
 - [Screenshots](#screenshots)
 - [Resources](#resources)
-- [Related Projects](#related-projects)
 - [License](#license)
 - [Report Bug](#report-bug)
 
 ## Overview
 
-jokopi is a complete open-source app coffee shop ordering.
 
-This is an example application that shows how `jokopi` is applied to a react app.
+Don Henry Café is a complete open source system for the management of orders and orders for different coffee-based products to be picked up at the store or delivered to your home
 
-Build using create react app.
+This is an example of the app that shows how `Don Henry Café` is built with react app.
+
+crear la Build usando create react app.
 
 You can build it by yourself
 
@@ -71,13 +71,13 @@ You need to install some software to run this project
 1. Clone this repository to your local
 
    ```bash
-   git clone https://github.com/nyannss/jokopi-react.git
+   git clone https://github.com/lisethgira/donHenryCafe.git
    ```
 
 2. Change current directory
 
    ```bash
-   cd jokopi-react
+   cd donHenryCafe
    ```
 
 3. Install dependencies
@@ -128,11 +128,6 @@ Special thanks for providing resources such as icons and images.
 
 If there are resources that belong to you, please let me know, I will write it here.
 
-## Related Projects
-
-- [jokopi-express](https://github.com/nyannss/jokopi) - Rest API
-- [jokopi-react-native](https://github.com/nyannss/jokopi-react-native) - Android & iOS Application
-
 ## License
 
 This project is licensed under the ISC License. See the [LICENSE](LICENSE) file for details.
@@ -140,4 +135,8 @@ This project is licensed under the ISC License. See the [LICENSE](LICENSE) file 
 ## Report Bug
 
 Any error report you can pull request
-or contact: <nyannss@proton.me>
+or contact:
+- <lagiraldo@misena.edu.co> 
+- <mcescudero111@misena.edu.co>
+- <lagiraldo@misena.edu.co>
+- <lagiraldo@misena.edu.co>
