@@ -138,5 +138,5 @@ Any error report you can pull request
 or contact:
 - <lagiraldo@misena.edu.co> 
 - <mcescudero111@misena.edu.co>
-- <lagiraldo@misena.edu.co>
+- <jaortiz6575@misena.edu.co>
 - <lagiraldo@misena.edu.co>
