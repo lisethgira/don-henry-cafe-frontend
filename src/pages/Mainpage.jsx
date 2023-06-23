@@ -12,14 +12,15 @@ import loveIcon from '../assets/icons/love.svg';
 import placeIcon from '../assets/icons/place.svg';
 import starIcon from '../assets/icons/star.svg';
 import staffIcon from '../assets/icons/user.svg';
-import mapImage from '../assets/images/global.svg';
+import mapImage from '../assets/images/centrocomercial.jpg';
 import amazonLogo from '../assets/images/partners/amazon.svg';
 import discordLogo from '../assets/images/partners/discord.svg';
 import netflixLogo from '../assets/images/partners/netflix.svg';
 import redditLogo from '../assets/images/partners/reddit.svg';
 import spotifyLogo from '../assets/images/partners/spotify.svg';
 import phProfile from '../assets/images/placeholder-profile.jpg';
-import productImage1 from '../assets/images/product-1.webp';
+import productImage1 from '../assets/images/malteada.jpg';
+
 // assets images
 import provideImage from '../assets/images/team-work.webp';
 // components
@@ -36,16 +37,16 @@ class Mainpage extends Component {
     ],
     reviews: [
       {
-        name: "Foo Barr",
-        text: "Wow... I am very happy to spend my whole day here. the Wi-fi is good, and the coffee and meals tho. I like it here!! Very recommended!",
+        name: "Fredy",
+        text: "Guau... Estoy muy feliz de pasar todo el día aquí. el Wi-fi es bueno, y el café y las comidas aunque. ¡¡Me gusta aquí!! ¡Muy recomendado!",
       },
       {
-        name: "Yessica Christy",
-        text: "I like it because I like to travel far and still can make my day better just by drinking their Hazelnut Latte",
+        name: "Yessica",
+        text: "Me gusta porque me gusta viajar lejos y todavía puedo mejorar mi día simplemente bebiendo su capuchino Latte",
       },
       {
-        name: "Kim Young Jou",
-        text: "This is very unusual for my taste, I haven’t liked coffee before but their coffee is the best! and yup, you have to order the chicken wings, the best in town",
+        name: "Jaime Salazar",
+        text: "Esto es muy inusual para mi gusto, no me ha gustado el café antes, ¡pero su café es el mejor!",
       },
     ],
   };
@@ -152,16 +153,16 @@ class Mainpage extends Component {
                   />
                   <h3 className="text-lg font-medium">capuchino vienes</h3>
                   <ul className="flex flex-col gap-5 mb-8 md:mb-20">
-                    <li className="flex items-center gap-4">
+                    <li className="flex items-center gap-4">Energía y estimulación
                       <img src={checkIcon} alt="" /> 
                     </li>
-                    <li className="flex items-center gap-4">
+                    <li className="flex items-center gap-4">Delicioso sabor
                       <img src={checkIcon} alt="" />
                     </li>
-                    <li className="flex items-center gap-4">
+                    <li className="flex items-center gap-4">Aporte nutricional
                       <img src={checkIcon} alt="" /> 
                     </li>
-                    <li className="flex items-center gap-4">
+                    <li className="flex items-center gap-4">Placer y bienestar emocional
                       <img src={checkIcon} alt="" /> 
                     </li>
                   </ul>
@@ -170,6 +171,7 @@ class Mainpage extends Component {
                     Compra
                   </button>
                 </div>
+
               ))}
             </div>
           </section>
@@ -182,6 +184,10 @@ class Mainpage extends Component {
               </h2>
               <p className="text-base text-gray-700 text-center">
               Visita Nuestra Tienda en el lugar en el mapa a continuación pase su buen día allí. ¡Nos vemos pronto!
+              
+                                    Dirección: Cl. 30A #82A-26, Medellín, Belén, Medellín, Antioquia
+              
+              
                     
                     
                 
@@ -274,7 +280,7 @@ class Mainpage extends Component {
               <aside className="flex-1 space-y-4 mb-5 md:mb-0">
                 <p className="text-3xl font-semibold">¡Consulta nuestra promoción de hoy!</p>
                 <p className="text-primary">
-                  &apos; mira las ofertas y elige la tuya
+                  &apos; Mira las ofertas y elige la tuya¨
                 </p>
               </aside>
               <aside className="hidden lg:block lg:flex-1"></aside>

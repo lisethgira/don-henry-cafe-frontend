@@ -15,7 +15,7 @@ export const CheckAuth = ({ children }) => {
   }));
 
   if (userInfo.token === "" && userInfo.token?.length < 1) {
-    toast.error("You must login first");
+    toast.error("Debes iniciar sesión primero");
     return <Navigate to="/auth/login" replace={true} />;
   }
   return <Outlet />;

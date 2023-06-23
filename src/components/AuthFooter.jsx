@@ -52,65 +52,65 @@ const AuthFooter = () => {
             <nav className="flex flex-row lg:flex-col gap-10 md:flex-1">
               <div className="flex-1 flex flex-col gap-5">
                 <div className="grid-item">
-                  <p className="font-bold">Product</p>
+                  <p className="font-bold"></p>
                 </div>
                 <div className="flex flex-col gap-2  lg:flex-row lg:gap-x-10 lg:gap-y-4 flex-wrap w-full">
                   <div className="grid-item flex-1">
                     <a href="#" target="_blank" rel="noopener noreferrer">
                       {" "}
-                      Download
+                      
                     </a>
                   </div>
                   <div className="grid-item flex-1">
                     <a href="#" target="_blank" rel="noopener noreferrer">
-                      Pricing
+                      
                     </a>
                   </div>
                   <div className="grid-item flex-1">
                     <a href="#" target="_blank" rel="noopener noreferrer">
-                      Locations
+                      
                     </a>
                   </div>
                   <div className="grid-item flex-1">
                     <a href="#" target="_blank" rel="noopener noreferrer">
-                      Countries
+                      
                     </a>
                   </div>
                   <div className="grid-item flex-1">
                     <a href="#" target="_blank" rel="noopener noreferrer">
-                      Blog
+                      
                     </a>
                   </div>
                 </div>
               </div>
               <div className="flex-1 flex flex-col gap-2">
                 <div className="grid-item">
-                  <p className="font-bold">Engage</p>
+                  <p className="font-bold"></p>
                 </div>
                 <div className="flex flex-col gap-2  lg:flex-row lg:gap-x-10 lg:gap-y-4 flex-wrap w-full text-base">
                   <div className="grid-item flex-1 min-w-[5rem]">
                     <a href="#" target="_blank" rel="noopener noreferrer">
-                      Coffee Shop?
+                      
                     </a>
                   </div>
                   <div className="grid-item flex-1 min-w-[5rem]">
                     <a href="#" target="_blank" rel="noopener noreferrer">
-                      FAQ
+                     
                     </a>
                   </div>
                   <div className="grid-item flex-1">
                     <a href="#" target="_blank" rel="noopener noreferrer">
-                      About Us
+                      
                     </a>
                   </div>
                   <div className="grid-item flex-1">
                     <a href="#" target="_blank" rel="noopener noreferrer">
-                      Privacy Policy
+                      
                     </a>
                   </div>
                   <div className="grid-item flex-1">
                     <a href="#" target="_blank" rel="noopener noreferrer">
-                      Terms of Services
+                      
                     </a>
                   </div>
                 </div>

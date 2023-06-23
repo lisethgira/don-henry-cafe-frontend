@@ -41,8 +41,8 @@ function Cart() {
   const [form, setForm] = useState({
     payment: "",
     delivery_address: "",
-    notes: "",
-    phone_number: "",
+    notas: "",
+    Numero: "",
   });
   useDocumentTitle("My Cart");
 
@@ -137,7 +137,7 @@ function Cart() {
         onClose={() => setRemove({ product_id: "", size_id: "" })}
         className="flex flex-col gap-y-5"
       >
-        Are you sure to delete this item form your cart?
+        ¿Estás seguro de eliminar este artículo de tu carrito?
         <div className="mx-auto space-x-3">
           <button
             onClick={() => {
@@ -163,14 +163,16 @@ function Cart() {
       <main className="bg-cart bg-cover bg-center">
         <div className="global-px  space-y-3 py-10">
           <section className="text-white lg:text-3xl text-2xl font-extrabold drop-shadow-lg text-center md:text-left">
-            Checkout your item now!
+          ¡Compruebe su artículo ahora!
           </section>
           <section className="flex flex-col md:flex-row lg:gap-16 gap-10">
             <aside className="flex-1 flex">
               <section className="flex bg-white rounded-lg p-5 lg:p-7 flex-col w-full">
                 <div className="w-full my-4 lg:my-6">
                   <p className="text-tertiary font-bold text-xl lg:text-3xl text-center">
-                    Order Summary
+                    
+                    Resumen del pedido
+
                   </p>
                 </div>
                 <section className="flex w-full flex-col gap-4 my-4">
@@ -263,26 +265,26 @@ function Cart() {
                 <hr />
                 <section className="flex flex-col w-full my-4">
                   <div className="flex flex-row uppercase lg:text-lg">
-                    <p className="flex-[2_2_0%]">Subtotal</p>
+                    <p className="flex-[2_2_0%]">TOTAL PARCIAL</p>
                     <p className="flex-1 lg:flex-none text-right">
-                      IDR{" "}
+                      COP{" "}
                       {n_f(
                         cart.reduce((acc, cur) => acc + cur.price * cur.qty, 0)
                       )}
                     </p>
                   </div>
                   <div className="flex flex-row uppercase lg:text-lg">
-                    <p className="flex-[2_2_0%]">Tax & Fees</p>
-                    <p className="flex-1 lg:flex-none text-right">IDR 20.000</p>
+                    <p className="flex-[2_2_0%]">IMPUESTOS Y TASAS</p>
+                    <p className="flex-1 lg:flex-none text-right">COP 20.000</p>
                   </div>
                   <div className="flex flex-row uppercase lg:text-lg">
-                    <p className="flex-[2_2_0%]">Shipping</p>
-                    <p className="flex-1 lg:flex-none text-right">IDR 10.000</p>
+                    <p className="flex-[2_2_0%]">Envío</p>
+                    <p className="flex-1 lg:flex-none text-right">COP 10.000</p>
                   </div>
                   <div className="flex flex-row uppercase  lg:text-xl font-bold my-10">
                     <p className="flex-[2_2_0%]">Total</p>
                     <p className="flex-initial lg:flex-none">
-                      IDR{" "}
+                      COP{" "}
                       {n_f(
                         cart.reduce(
                           (acc, cur) => acc + cur.price * cur.qty,
@@ -296,24 +298,24 @@ function Cart() {
             </aside>
             <aside className="flex-1 flex flex-col gap-5">
               <section className="text-white text-xl lg:text-2xl font-extrabold drop-shadow-lg text-center md:text-left relative items-center">
-                Address details
+                Detalles de dirección
                 <button
                   onClick={editMode ? saveEditInfo : toggleEdit}
                   className="absolute text-lg right-0 bottom-0 top-1 hover:underline"
                 >
-                  {editMode ? "save" : "edit"}
+                  {editMode ? "ahorrar" : "editar"}
                 </button>
               </section>
               <section className="bg-white rounded-xl  p-5 lg:p-7 space-y-2">
                 <div className="flex gap-1">
-                  <b>Delivery</b> to
+                  <b>Entrega</b> 
                   <input
                     value={form.delivery_address}
                     onChange={onChangeForm}
                     disabled={!editMode}
                     className="outline-none flex-1"
                     name="delivery_address"
-                    placeholder="address..."
+                    placeholder=""
                   />
                 </div>
                 <hr />
@@ -322,8 +324,8 @@ function Cart() {
                   onChange={onChangeForm}
                   disabled={!editMode}
                   className="outline-none w-full"
-                  name="notes"
-                  placeholder="notes..."
+                  name="notas"
+                  placeholder="Direccion"
                 />
                 <hr />
                 <input
@@ -332,25 +334,27 @@ function Cart() {
                   disabled
                   className="outline-none"
                   name="phone_number"
-                  placeholder="phone number..."
+                  placeholder="cel"
                 />
               </section>
               <section className="text-white text-xl lg:text-2xl font-extrabold drop-shadow-lg text-center md:text-left relative">
-                Payment method
+                 
+                    Método de pago
+                    
               </section>
               <section className="bg-white rounded-xl  p-5 lg:p-7 space-y-3">
                 <div className="flex gap-2 items-center">
                   <input
                     type="radio"
                     className="accent-tertiary w-4 h-4"
-                    name="payment"
+                    name="Pago"
                     value="1"
-                    id="paymentCard"
+                    id="Tarjeta de Pago"
                     checked={form.payment === "1"}
                     onChange={onChangeForm}
                   />
                   <label
-                    htmlFor="paymentCard"
+                    htmlFor="Tarjeta de Pago"
                     className="flex items-center gap-2"
                   >
                     <svg
@@ -368,7 +372,7 @@ function Cart() {
                         fill="white"
                       />
                     </svg>
-                    Card
+                    Tarjeta
                   </label>
                 </div>
                 <hr />
@@ -400,7 +404,7 @@ function Cart() {
                         fill="white"
                       />
                     </svg>
-                    Bank account
+                    cuenta bancaria
                   </label>
                 </div>
                 <hr />
@@ -454,7 +458,7 @@ function Cart() {
                         />
                       </defs>
                     </svg>
-                    Cash on delivery
+                    contra reembolso
                   </label>
                 </div>
               </section>
@@ -465,7 +469,7 @@ function Cart() {
                   isLoading && "loading"
                 } btn btn-block btn-primary text-white py-4 font-bold rounded-lg disabled:bg-opacity-100`}
               >
-                Confirm and Pay
+                Confirmar y pagar
               </button>
             </aside>
           </section>

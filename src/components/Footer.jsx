@@ -49,7 +49,7 @@ class Footer extends Component {
             <nav className="flex flex-row gap-10 md:flex-1">
               <div className="flex-1 flex flex-col gap-5">
                 <div className="grid-item">
-                  <h4 className="font-bold">Product</h4>
+                  <h4 className="font-bold">Productos</h4>
                 </div>
                 <div className="flex flex-col gap-2">
                   <div className="grid-item">
@@ -104,7 +104,7 @@ class Footer extends Component {
               </div>
               <div className="flex-1 flex flex-col gap-5">
                 <div className="grid-item">
-                  <h4 className="font-bold">Engage</h4>
+                  <h4 className="font-bold">Comprometer</h4>
                 </div>
                 <div className="flex flex-col gap-2">
                   <div className="grid-item">

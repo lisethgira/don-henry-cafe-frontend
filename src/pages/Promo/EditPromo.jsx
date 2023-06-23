@@ -233,9 +233,9 @@ const EditPromo = (props) => {
         <main className="global-px py-6">
           <nav className="flex flex-row list-none gap-1">
             <li className="after:content-['>'] after:font-semibold text-primary">
-              <NavLink to="/products">Favorite & Promo </NavLink>
+              <NavLink to="/products">Favorito y promoción </NavLink>
             </li>
-            <li className="text-tertiary font-semibold">Edit promo</li>
+            <li className="text-tertiary font-semibold">Editar promoción</li>
           </nav>
           <section className="flex flex-col md:flex-row py-14">
             <section className="flex-1 flex flex-col items-center gap-4">
@@ -251,19 +251,19 @@ const EditPromo = (props) => {
                 htmlFor="form_image"
                 className="btn btn-block btn-lg normal-case mt-2 btn-accent text-white"
               >
-                Take a picture
+                Toma una foto
               </label>
               <label
                 htmlFor="form_image"
                 className="btn btn-block btn-lg normal-case btn-secondary text-tertiary"
               >
-                Choose from gallery
+                Elegir de la galería
               </label>
               <button
                 onClick={() => setDeleteModal(true)}
                 className="btn btn-block btn-error btn-lg normal-case btn-secondary"
               >
-                Delete product
+                Eliminar producto
               </button>
             </section>
             <form

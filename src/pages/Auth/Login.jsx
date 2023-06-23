@@ -127,7 +127,7 @@ const Login = () => {
               htmlFor="email"
               className="text-[#4F5665] font-bold"
             >
-              Email address :
+               correo electrónico :
             </label>
             <input
               type="text"
@@ -137,7 +137,7 @@ const Login = () => {
                 `border-gray-400 border-2 rounded-2xl p-3 w-full mt-2` +
                 (error.email != "" ? " border-red-500" : "")
               }
-              placeholder="Enter your email address"
+              placeholder=""
               value={form.email}
               onChange={onChangeForm}
             />
@@ -151,7 +151,7 @@ const Login = () => {
               htmlFor="password"
               className="text-[#4F5665] font-bold"
             >
-              Password :
+              Contraseña :
             </label>
             <input
               type="password"
@@ -161,7 +161,7 @@ const Login = () => {
                 `border-gray-400 border-2 rounded-2xl p-3 w-full mt-2` +
                 (error.password != "" ? " border-red-500" : "")
               }
-              placeholder="Enter your password"
+              placeholder=""
               value={form.password}
               onChange={onChangeForm}
             />
@@ -186,7 +186,7 @@ const Login = () => {
                   htmlFor="remember"
                   className="text-gray-500 dark:text-gray-300"
                 >
-                  Remember me
+                  Recordar
                 </label>
               </div>
             </div>
@@ -195,7 +195,7 @@ const Login = () => {
               className="text-sm font-medium text-primary-600 hover:underline dark:text-primary-500"
               name="rememberMe"
             >
-              Forgot password?
+              ¿Has olvidado tu contraseña?
             </Link>
           </div>
           <button
@@ -244,17 +244,17 @@ const Login = () => {
               width="23px"
               className="w  -5 h-5 mr-2"
             />
-            <span>Login with Google</span>
+            <span>  Login Google</span>
           </button>
           <div className="inline-flex items-center justify-center w-full">
             <hr className="w-full h-px my-6 bg-gray-200 border-0 dark:bg-gray-700" />
             <span className="absolute px-3 font-medium text-gray-900 -translate-x-1/2 bg-white left-1/2 w-56">
-              Don’t have an account?
+            No tienes una cuenta?
             </span>
           </div>
           <Link to="/auth/register">
             <button className="w-full text-white bg-tertiary focus:ring-4 focus:outline-none focus:ring-primary-300 font-bold rounded-2xl text-base md:text-lg p-3 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 shadow-xl lg:mb-20">
-              Sign up here
+            Registrate aquí
             </button>
           </Link>
         </form>
