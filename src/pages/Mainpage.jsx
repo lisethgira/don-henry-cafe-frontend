@@ -20,9 +20,11 @@ import redditLogo from '../assets/images/partners/reddit.svg';
 import spotifyLogo from '../assets/images/partners/spotify.svg';
 import phProfile from '../assets/images/placeholder-profile.jpg';
 import productImage1 from '../assets/images/malteada.jpg';
+import productImage2 from '../assets/images/cafe.jpeg';
+import productImage3 from '../assets/images/cafegrano.jpeg';
 
 // assets images
-import provideImage from '../assets/images/team-work.webp';
+import provideImage from '../assets/images/CLIENTAMETICHE.jpeg';
 // components
 import Footer from '../components/Footer';
 import Header from '../components/Header';
@@ -73,37 +75,6 @@ class Mainpage extends Component {
                   </Link>
                 </div>
               </div>
-             {/*  <section className="relative bg-white mt-20 mb-[-9rem] rounded-xl shadow-xl text-quartenary flex flex-row py-5 justify-center items-center text-center md:text-left">
-                <aside className="flex-1 border-r-2 py-2 md:py-6 flex flex-col md:flex-row justify-center gap-3 md:gap-8 items-center">
-                  <div>
-                    <div className="bg-secondary rounded-full p-2 w-10 aspect-square flex justify-center items-center">
-                      <img src={staffIcon} alt="" />
-                    </div>
-                  </div>
-                  <div>
-                    <p className="text-md lg:text-xl">90+</p>
-                    <p className="font-normal text-primary">Staff</p>
-                  </div>
-                </aside>
-                <aside className="flex-1 border-r-2 py-2 md:py-6 flex flex-col md:flex-row justify-center gap-3 md:gap-8 items-center">
-                  <div className="bg-secondary rounded-full p-2 w-10 aspect-square flex justify-center items-center">
-                    <img src={loveIcon} alt="" />
-                  </div>
-                  <div>
-                    <p className="text-md lg:text-xl">800+</p>
-                    <p className="font-normal text-primary">Customers</p>
-                  </div>
-                </aside>
-                <aside className="flex-1 py-2 md:py-6 flex flex-col md:flex-row justify-center gap-3 md:gap-8 items-center">
-                  <div className="bg-secondary rounded-full p-2 w-10 aspect-square flex justify-center items-center">
-                    <img src={placeIcon} alt="" />
-                  </div>
-                  <div>
-                    <p className="text-md lg:text-xl">30+</p>
-                    <p className="font-normal text-primary">Stores</p>
-                  </div>
-                </aside>
-              </section> */}
             </div>
           </section>
           <div className="mb-8 md:mb-20"></div>
@@ -138,12 +109,11 @@ class Mainpage extends Component {
               
 
               </p>
-            </div>
+                  </div>
             <div className="flex flex-row flex-wrap justify-center gap-12 mt-20">
-              {Array("", "", "").map((item, idx) => (
-                <div
+            <div
                   className="flex-1 flex flex-col justify-center border-gray-400 border rounded-xl px-5 py-5 md:py-12 items-center gap-5 text-base"
-                  key={idx}
+                  
                 >
                   <img
                     src={productImage1}
@@ -171,8 +141,66 @@ class Mainpage extends Component {
                     Compra
                   </button>
                 </div>
-
-              ))}
+                <div
+                  className="flex-1 flex flex-col justify-center border-gray-400 border rounded-xl px-5 py-5 md:py-12 items-center gap-5 text-base"
+                  
+                >
+                  <img
+                    src={productImage2}
+                    alt=""
+                    width="140px"
+                    className="rounded-full mb-7"
+                  />
+                  <h3 className="text-lg font-medium">capuchino vienes</h3>
+                  <ul className="flex flex-col gap-5 mb-8 md:mb-20">
+                    <li className="flex items-center gap-4">Energía y estimulación
+                      <img src={checkIcon} alt="" /> 
+                    </li>
+                    <li className="flex items-center gap-4">Delicioso sabor
+                      <img src={checkIcon} alt="" />
+                    </li>
+                    <li className="flex items-center gap-4">Aporte nutricional
+                      <img src={checkIcon} alt="" /> 
+                    </li>
+                    <li className="flex items-center gap-4">Placer y bienestar emocional
+                      <img src={checkIcon} alt="" /> 
+                    </li>
+                  </ul>
+                  <p className="font-medium text-2xl"></p>
+                  <button className="bg-secondary text-tertiary px-9 py-3 rounded-3xl font-bold">
+                    Compra
+                  </button>
+                </div>
+                <div
+                  className="flex-1 flex flex-col justify-center border-gray-400 border rounded-xl px-5 py-5 md:py-12 items-center gap-5 text-base"
+                  
+                >
+                  <img
+                    src={productImage3}
+                    alt=""
+                    width="140px"
+                    className="rounded-full mb-7"
+                  />
+                  <h3 className="text-lg font-medium">capuchino vienes</h3>
+                  <ul className="flex flex-col gap-5 mb-8 md:mb-20">
+                    <li className="flex items-center gap-4">Energía y estimulación
+                      <img src={checkIcon} alt="" /> 
+                    </li>
+                    <li className="flex items-center gap-4">Delicioso sabor
+                      <img src={checkIcon} alt="" />
+                    </li>
+                    <li className="flex items-center gap-4">Aporte nutricional
+                      <img src={checkIcon} alt="" /> 
+                    </li>
+                    <li className="flex items-center gap-4">Placer y bienestar emocional
+                      <img src={checkIcon} alt="" /> 
+                    </li>
+                  </ul>
+                  <p className="font-medium text-2xl"></p>
+                  <button className="bg-secondary text-tertiary px-9 py-3 rounded-3xl font-bold">
+                    Compra
+                  </button>
+                </div>
             </div>
           </section>
           <section className="global-px py-8 md:py-20">
@@ -197,44 +225,13 @@ class Mainpage extends Component {
               <img src={mapImage} alt="global map" />
             </div>
           </section>
-          <section className="global-px py-8 md:py-20">
-            <div className="flex flex-col items-center mb-8 md:mb-20">
-              <h2 className="text-4xl text-quartenary font-semibold mb-5 text-center">
-              ¡Descubre HenryCafé
+          <section className="global-px py-2 md:py-4">
+            <div className="flex flex-col items-center mb-2 md:mb-4">
+              <h2 className="text-4xl text-quartenary font-semibold  text-center">
+              ¡Descubre Don Henry Café!
               </h2>
             </div>
-            <div className="flex flex-row flex-wrap justify-center items-center gap-4 md:gap-12 ">
-              {/*<img
-                src={netflixLogo}
-                alt=""
-                width="100px"
-                className="lg:w-[15%] aspect-[3/2] object-contain grayscale opacity-20 duration-300 hover:filter-none hover:opacity-100"
-              />
-              <img
-                src={redditLogo}
-                alt=""
-                width="100px"
-                className="lg:w-[15%] aspect-[3/2] object-contain grayscale opacity-20 duration-300 hover:filter-none hover:opacity-100"
-              />
-              <img
-                src={amazonLogo}
-                alt=""
-                width="100px"
-                className="lg:w-[15%] aspect-[3/2] object-contain grayscale opacity-20 duration-300 hover:filter-none hover:opacity-100"
-              />
-              <img
-                src={discordLogo}
-                alt=""
-                width="100px"
-                className="lg:w-[15%] aspect-[3/2] object-contain grayscale opacity-20 duration-300 hover:filter-none hover:opacity-100"
-              />
-             {/* <img
-                src={spotifyLogo}
-                alt=""
-                width="100px"
-                className="lg:w-[15%] aspect-[3/2] object-contain grayscale opacity-20 duration-300 hover:filter-none hover:opacity-100"*/}
-              
-            </div>
+            
           </section>
           <section className="global-px py-8 md:py-20">
             <div className="flex flex-col items-center mb-8 md:mb-20 text-center">
