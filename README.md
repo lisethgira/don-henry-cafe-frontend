@@ -8,7 +8,7 @@
    Open Source. Front-end.
    </p>
 
-[Demo](https://donhenrycafe-react.vercel.app/) · [Related Projects](#related-projects) · [Request Feature](#report-bug)
+[Demo](https://don-henry-cafe.vercel.app/) · [Related Projects](#related-projects) · [Request Feature](#report-bug)
 
 </div>
 
