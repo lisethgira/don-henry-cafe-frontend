@@ -6,6 +6,7 @@ import React, {
 import { Link } from 'react-router-dom';
 
 // assets icons
+
 import checkCircle from '../assets/icons/check-circle.svg';
 import checkIcon from '../assets/icons/check.svg';
 import loveIcon from '../assets/icons/love.svg';
@@ -23,8 +24,10 @@ import productImage1 from '../assets/images/malteada.jpg';
 import productImage2 from '../assets/images/cafe.jpeg';
 import productImage3 from '../assets/images/cafegrano.jpeg';
 
+
 // assets images
 import provideImage from '../assets/images/CLIENTAMETICHE.jpeg';
+
 // components
 import Footer from '../components/Footer';
 import Header from '../components/Header';
@@ -215,7 +218,7 @@ class Mainpage extends Component {
               
                                     Dirección: Cl. 30A #82A-26, Medellín, Belén, Medellín, Antioquia
               
-              
+                                    
                     
                     
                 

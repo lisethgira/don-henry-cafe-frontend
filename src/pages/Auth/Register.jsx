@@ -101,15 +101,15 @@ const Register = () => {
 
   return (
     <>
-      <header className="flex justify-between mb-10">
+      <header className="flex justify-center items-center mb-10">
         <Link to="/">
-          <div className="font-extrabold flex flex-row justify-center gap-4">
-            <img src={icon} alt="logo" width="30px" />
-            <h1 className="text-xl">Don Henry Café.</h1>
+          <div className="font-extrabold flex flex-col items-center justify-center gap-4 text-center">
+            <img src={icon} alt="logo" width="65px" />
+            <h1 className="text-xl text-black font-semibold">Don Henry Café.</h1>
           </div>
         </Link>
-        <div className="text-xl font-semibold text-tertiary">Login</div>
       </header>
+
       <section className="mt-16">
         <form className="space-y-4 md:space-y-4 relative">
           <div>
@@ -169,7 +169,7 @@ const Register = () => {
               Número de teléfono :
             </label>
             <input
-              type="text"
+              type="number"
               name="phoneNumber"
               id="phoneNumber"
               className={
@@ -220,27 +220,16 @@ const Register = () => {
             )}
             Inscribirse
           </button>
-          <button
-            type="submit"
-            className="w-full text-tertiary bg-white focus:ring-4 focus:outline-none focus:ring-primary-300 font-bold rounded-2xl text-lg p-3 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 shadow-xl inline-flex justify-center items-center"
-          >
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
-              alt=""
-              width="23px"
-              className="w  -5 h-5 mr-2"
-            />
-            <span>Regístrese con Google</span>
-          </button>
+
           <div className="inline-flex items-center justify-center w-full">
             <hr className="w-full h-px my-6 bg-gray-200 border-0 dark:bg-gray-700" />
             <span className="absolute px-3 font-medium text-gray-900 -translate-x-1/2 bg-white left-1/2 w-64 text-center">
-            ¿Ya tienes una cuenta?
+              ¿Ya tienes una cuenta?
             </span>
           </div>
           <Link to="/auth/login">
             <button className="w-full text-white bg-tertiary focus:ring-4 focus:outline-none focus:ring-primary-300 font-bold rounded-2xl text-lg p-3 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 shadow-xl lg:mb-20">
-            Entre aquí
+              Entre aquí
             </button>
           </Link>
         </form>

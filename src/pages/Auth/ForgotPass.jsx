@@ -26,7 +26,7 @@ const ForgotPass = () => {
     setResend(now() + 2 * 60 * 1000); // now + 2 minutes
     let err = "";
     if (email.length < 1) {
-      err = "Must input email!";
+      err = "¡Debe ingresar el correo electrónico!";
     }
     setError(err);
     if (!isLoading && err.length < 1) {
