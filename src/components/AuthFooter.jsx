@@ -10,7 +10,7 @@ import logo from '../assets/donHenryCafe.png';
 const AuthFooter = () => {
   return (
     <>
-      <footer className="bg-[#F8F8F8] text-[#4f5665]">
+      <footer className="bg-[#A2938C] text-[#4f5665]">
         <div className="global-px lg:px-16">
           <div className="py-5  md:py-10"></div>
           <div className="flex flex-col-reverse gap-12 md:flex-row">

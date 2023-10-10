@@ -13,7 +13,7 @@ module.exports = {
         cart: "url('/public/assets/images/bg-cart.webp')",
       },
       boxShadow: {
-        primary: "0px 6px 20px 0px #00000020;",
+        primary: "0px 6px 20px 0px #000020;",
       },
       spacing: {
         22: "7rem",
@@ -34,7 +34,7 @@ module.exports = {
   daisyui: {
     themes: [
       {
-        jokopi: {
+        donhenry: {
           primary: "#6A4029",
           secondary: "#ffba33",
           accent: "#0b132a",

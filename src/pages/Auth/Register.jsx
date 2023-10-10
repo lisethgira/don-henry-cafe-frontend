@@ -105,7 +105,9 @@ const Register = () => {
         <Link to="/">
           <div className="font-extrabold flex flex-col items-center justify-center gap-4 text-center">
             <img src={icon} alt="logo" width="65px" />
-            <h1 className="text-xl text-black font-semibold">Don Henry Café.</h1>
+            <h1 className="text-xl text-black font-semibold">
+              Don Henry Café.
+            </h1>
           </div>
         </Link>
       </header>
@@ -223,7 +225,7 @@ const Register = () => {
 
           <div className="inline-flex items-center justify-center w-full">
             <hr className="w-full h-px my-6 bg-gray-200 border-0 dark:bg-gray-700" />
-            <span className="absolute px-3 font-medium text-gray-900 -translate-x-1/2 bg-white left-1/2 w-64 text-center">
+            <span className="absolute px-3 font-medium text-gray-900 -translate-x-1/2 left-1/2 bg-[#A2938C] w-64 text-center">
               ¿Ya tienes una cuenta?
             </span>
           </div>
