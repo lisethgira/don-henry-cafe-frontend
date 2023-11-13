@@ -5,6 +5,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 
 import placeholderProfile from "../assets/images/placeholder-profile.jpg";
 import { contextAct } from "../redux/slices/context.slice";
+import { getUserData } from "../utils/authUtils";
 
 function Sidebar({ onClose }) {
   const profile = useSelector((state) => state.profile);
@@ -26,22 +27,22 @@ function Sidebar({ onClose }) {
               <div className="w-12 rounded-xl border">
                 <img
                   src={
-                    userInfo.token && profile.isFulfilled && profile.data?.img
-                      ? profile.data?.img
+                    getUserData()
+                      ? getUserData().photo
                       : placeholderProfile
                   }
                 />
               </div>
             </div>
             <div className="flex-col">
-              {userInfo.token ? (
+              {getUserData() ? (
                 <>
-                  <p className="font-medium">{profile.data?.display_name}</p>
-                  <p className="text-sm">{profile.data?.email}</p>
+                  <p className="font-medium">{getUserData().email}</p>
+                  <p className="text-sm">{getUserData().email}</p>
                 </>
               ) : (
                 <>
-                  <p className="font-medium">Guest</p>
+                  <p className="font-medium">Invitado </p>
                   <p className="text-sm ">
                     {/* <Link to={"/auth/login"} className="text-yellow-600">
                       Login
@@ -89,7 +90,7 @@ function Sidebar({ onClose }) {
                   className="block p-4 text-sm font-semibold text-gray-400 hover:bg-tertiary/40 hover:text-tertiary rounded"
                   to="/"
                 >
-                  Home
+                  Inicio
                 </NavLink>
               </li>
               <li className="mb-1">
@@ -97,7 +98,7 @@ function Sidebar({ onClose }) {
                   className="block p-4 text-sm font-semibold text-gray-400 hover:bg-tertiary/40 hover:text-tertiary rounded"
                   to="/products"
                 >
-                  Products
+                  Productos
                 </NavLink>
               </li>
               <li className="mb-1">
@@ -105,7 +106,7 @@ function Sidebar({ onClose }) {
                   className="block p-4 text-sm font-semibold text-gray-400 hover:bg-tertiary/40 hover:text-tertiary rounded"
                   to="/cart"
                 >
-                  Your Cart
+                  tu pedido
                 </NavLink>
               </li>
               <li className="mb-1">
@@ -113,7 +114,7 @@ function Sidebar({ onClose }) {
                   className="block p-4 text-sm font-semibold text-gray-400 hover:bg-tertiary/40 hover:text-tertiary rounded"
                   to="/history"
                 >
-                  History
+                  
                 </NavLink>
               </li>
               {Number(userInfo.role) > 1 && (
@@ -123,7 +124,7 @@ function Sidebar({ onClose }) {
                       className="block p-4 text-sm font-semibold text-gray-400 hover:bg-tertiary/40 hover:text-tertiary rounded"
                       to="/admin"
                     >
-                      Admin Dashboard
+                      Panel de administración
                     </NavLink>
                   </li>
                   <li className="mb-1">
@@ -131,7 +132,7 @@ function Sidebar({ onClose }) {
                       className="block p-4 text-sm font-semibold text-gray-400 hover:bg-tertiary/40 hover:text-tertiary rounded"
                       to="/manage-order"
                     >
-                      Manage Order
+                      Gestionar pedido
                     </NavLink>
                   </li>
                 </>
@@ -139,13 +140,13 @@ function Sidebar({ onClose }) {
             </ul>
           </div>
           <div className="mt-auto">
-            {userInfo.token ? (
+            {getUserData() ? (
               <button
                 onClick={() => dispatch(contextAct.openLogout())}
                 className="block p-4 text-sm font-semibold text-gray-400 hover:bg-tertiary/40 hover:text-tertiary rounded"
                 to="/history"
               >
-                Logout
+               Cerrar sesión
               </button>
             ) : (
               <div className="pt-6">
@@ -153,18 +154,18 @@ function Sidebar({ onClose }) {
                   className="block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold bg-gray-50 hover:bg-gray-100 rounded-xl shadow-md"
                   to="/auth/login"
                 >
-                  Login
+                  Inicio de Sesion
                 </NavLink>
                 <NavLink
                   className="block px-4 py-3 mb-2 leading-loose text-xs text-center font-semibold bg-secondary hover:bg-secondary-focus  rounded-xl shadow-md"
                   to="/auth/register"
                 >
-                  Sign Up
+                  Inscribirse
                 </NavLink>
               </div>
             )}
             <p className="my-4 text-xs text-center text-gray-400">
-              <span>Copyright © 2023</span>
+              <span>HenryCafe© 2023</span>
             </p>
           </div>
         </div>

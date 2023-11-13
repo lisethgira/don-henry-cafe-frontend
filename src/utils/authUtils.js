@@ -2,6 +2,12 @@ import jwt_decode from "jwt-decode";
 
 import { uinfoAct } from "../redux/slices/userInfo.slice";
 import store from "../redux/store";
+import { get } from "./localStorage";
+
+export function isLogged() {
+  const users = JSON.parse(get('users') || '[]');
+  return Boolean(users.find(user => user.isLogged));
+}
 
 export function uinfoFromRedux() {
   const state = store.getState();
@@ -27,10 +33,13 @@ export function isAuthenticated() {
 }
 
 export function getUserData() {
-  const userInfo = uinfoFromRedux();
-  if (userInfo.token.length > 0) {
-    const decoded = jwt_decode(userInfo.token);
-    return decoded;
-  }
-  return {};
+  const users = JSON.parse(get('users') || '[]');
+  return users.find(user => user.isLogged);
+
+  // const userInfo = uinfoFromRedux();
+  // if (userInfo.token.length > 0) {
+  //   const decoded = jwt_decode(userInfo.token);
+  //   return decoded;
+  // }
+  // return {};
 }

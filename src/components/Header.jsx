@@ -20,7 +20,7 @@ import logo from "../assets/donHenryCafe.png";
 import { contextAct } from "../redux/slices/context.slice";
 import { profileAction } from "../redux/slices/profile.slice";
 import { uinfoAct } from "../redux/slices/userInfo.slice";
-import { getUserData, isAuthenticated } from "../utils/authUtils";
+import { getUserData, isAuthenticated, isLogged } from "../utils/authUtils";
 import withSearchParams from "../utils/wrappers/withSearchParams.js";
 import Logout from "./Logout";
 import Sidebar from "./Sidebar";
@@ -264,7 +264,7 @@ class Header extends Component {
                 </NavLink>
               </li>
             </nav>
-            {isAuthenticated() ? (
+            {isLogged() ? (
               <div className="flex-row gap-10 hidden lg:flex select-none py-4 items-center">
                 <div
                   ref={this.searchRef}
@@ -361,8 +361,8 @@ class Header extends Component {
                       <div className="w-9 rounded-full">
                         <img
                           src={
-                            this.props?.profile?.data?.img
-                              ? this.props.profile.data.img
+                            getUserData()?.photo
+                              ? getUserData()?.photo
                               : placeholderProfile
                           }
                         />
@@ -410,12 +410,12 @@ class Header extends Component {
                           </p>
                         </div>
                         <div className="py-1">
-                          <NavLink
+                         {/*  <NavLink
                             className="block px-4 py-2 hover:bg-gray-100  duration-200"
                             to="/profile/"
                           >
                             Perfil
-                          </NavLink>
+                          </NavLink> */}
                           {/* <a
                           className="block px-4 py-2 hover:bg-gray-100 duration-200"
                           href="#"
@@ -459,7 +459,7 @@ class Header extends Component {
                             className="block px-4 py-2 hover:bg-gray-100 duration-200 cursor-pointer"
                             onClick={this.logoutHandler}
                           >
-                            desconectar
+                            Cerrar Sesion
 
                           </a>
                         </div>

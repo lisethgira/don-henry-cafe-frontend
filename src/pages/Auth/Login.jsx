@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { get } from '../../utils/localStorage';
+import { save } from '../../utils/localStorage';
 
 function Login() {
   const [email, setEmail] = useState('');
@@ -24,11 +24,13 @@ function Login() {
     } else {
       alert('Invalid email or password');
     } */
-    const users = JSON.parse(localStorage.getItem('users'))
+    const users = JSON.parse(localStorage.getItem('users') || '[]')
     const userExists = users.find(user => user.email === email && user.password === password)
-    if(userExists){
-      window.location.href="http://localhost:3000/"
-      
+    if(userExists) {
+      // const filteredUsers = users.filter(user => user.email === userExists.email && user.password === userExists.password)
+      userExists.isLogged = true;
+      save('users', JSON.stringify(users))
+      window.location.href = "http://localhost:3000/"
     }
     else{
       alert("tu contraseña o email estan incorrectos");
