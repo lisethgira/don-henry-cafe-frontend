@@ -1,5 +1,5 @@
 import { lazy,Suspense } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 
 //===============================================================================================================================================
@@ -20,13 +20,13 @@ const AppRouter = () => {
   return (
     <Router>
       <Suspense>
-      <Routes>
+      <Switch>
         <Route path="/" exact component={Home} />
 
         <DonHenryCafeRoutes path="/donhenrycafe" />
         
         <Route path="*" component={PageNotFound} />
-      </Routes>
+      </Switch>
       </Suspense>
     </Router>
   );
