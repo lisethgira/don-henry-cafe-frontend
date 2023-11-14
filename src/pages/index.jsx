@@ -1,4 +1,3 @@
-// import Sidebar from '../common/pages/sidebar/index'
 const Home = () => {
   return (
     <>

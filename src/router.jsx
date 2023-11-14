@@ -1,6 +1,5 @@
-import { lazy,Suspense } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-
+import { lazy, Suspense } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 //===============================================================================================================================================
 //========================================== Rutas principales  =================================================================================
@@ -11,7 +10,7 @@ const DonHenryCafeRoutes = lazy(() => import('./routes/donhenry.routes'));
 //========================================== Otras rutas ========================================================================================
 //===============================================================================================================================================
 const PageNotFound = lazy(() => import('./common/components/Error/404'));
- const Home = lazy(() => import('./pages/index'));
+const Home = lazy(() => import('./pages/index'));
 
 const AppRouter = () => {
   //===============================================================================================================================================
@@ -20,13 +19,13 @@ const AppRouter = () => {
   return (
     <Router>
       <Suspense>
-      <Switch>
-        <Route path="/" exact component={Home} />
+        <Routes>
+          <Route path="/" element={<Home />} />
 
-        <DonHenryCafeRoutes path="/donhenrycafe" />
-        
-        <Route path="*" component={PageNotFound} />
-      </Switch>
+          <Route path="/donhenrycafe" element={<DonHenryCafeRoutes />} />
+
+          <Route path="*" element={<PageNotFound />} />
+        </Routes>
       </Suspense>
     </Router>
   );
