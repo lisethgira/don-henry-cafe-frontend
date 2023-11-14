@@ -1,13 +1,12 @@
-import {Route, Routes } from "react-router-dom";
+// import {Route, Routes } from "react-router-dom";
 
 const AppRouter = () => {
   return (
     <>
-      <Routes>
-        <Route path="/">
-          <h1>estoy en la pagina de inicio de mi aplicación</h1>
-        </Route> 
-      </Routes>
+      <div>
+      <h2>Rutas para Don Henry</h2>
+      {/* Agrega tus rutas específicas */}
+    </div>
     </>
   );
 };

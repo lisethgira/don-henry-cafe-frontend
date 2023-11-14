@@ -1,13 +1,10 @@
-import Sidebar from '../common/pages/sidebar/index'
-const Home =() => {
-    return (
-        <>
-        <Sidebar />
-        <main>
-        <h1>este es el index de mi aplicación</h1>
-        </main>
-        </>
-    );
-    }
-    
+// import Sidebar from '../common/pages/sidebar/index'
+const Home = () => {
+  return (
+    <>
+      <h1>este es el index de mi aplicación</h1>
+    </>
+  );
+};
+
 export default Home;

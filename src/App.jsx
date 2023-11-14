@@ -1,15 +1,10 @@
 import './index.css'
-
-//Librerias
-import { Router } from 'react-router-dom';
-import Routes from "./router";
+import AppRouter from './router';
 
 const App = () => {
   return <>
-  <Router>
-  <Routes/>
-  </Router>
- 
+  <h1>¡Bienvenido a mi aplicación React!</h1>
+  <AppRouter />
   </>
 };
 export default App;
