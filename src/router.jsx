@@ -1,17 +1,19 @@
-import { lazy } from "react";
+import { lazy } from 'react';
+
 //Librerias
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
 
 //===============================================================================================================================================
 //========================================== Rutas principales  =================================================================================
 //===============================================================================================================================================
-const DonHenryCafeRoutes = lazy(() => import("./routes/donhenry.routes"));
+const DonHenryCafeRoutes = lazy(() => import('./routes/donhenry.routes'));
 
 //===============================================================================================================================================
 //========================================== Otras rutas ========================================================================================
 //===============================================================================================================================================
-const PageNotFound = lazy(() => import("./common/components/Error/404"));
-const Home = lazy(() => import("./pages/home"));
+const PageNotFound = lazy(() => import('./common/components/Error/404'));
+const Home = lazy(() => import('./pages/index'));
 
 const Routes = () => {
   //===============================================================================================================================================
@@ -23,7 +25,7 @@ const Routes = () => {
         <Route path="/" exact component={Home} />
 
         <DonHenryCafeRoutes path="/donhenrycafe" />
-
+        
         <Route path="*" component={PageNotFound} />
       </Switch>
     </Router>

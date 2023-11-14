@@ -1,11 +1,10 @@
-import { memo } from "react";
+  const Sidebar = () => {
+        
+      return (
+        <nav >
+            este es mi navbar 
+        </nav>
+      );
+  };
 
-const Sidebar = () => {
-  return (
-    <div>
-      este es el menu
-    </div>
-  )
-}
-
-export default memo(Sidebar);
+  export default Sidebar;

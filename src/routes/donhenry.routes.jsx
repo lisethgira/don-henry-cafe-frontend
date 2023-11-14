@@ -5,8 +5,8 @@ const AppRouter = () => {
     <>
       <Routes>
         <Route path="/">
-          <h1>estoy en la ruta</h1>
-          </Route> 
+          <h1>estoy en la pagina de inicio de mi aplicación</h1>
+        </Route> 
       </Routes>
     </>
   );
