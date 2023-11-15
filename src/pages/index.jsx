@@ -5,7 +5,9 @@ const Home = () => {
   return (
     <>
       <Navbar />
+      <div className='container mx-6'>
       <h1>este es el index de mi aplicación</h1>
+      </div>
     </>
   );
 };

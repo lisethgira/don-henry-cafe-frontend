@@ -11,6 +11,8 @@ const DonHenryCafeRoutes = lazy(() => import('./routes/donhenry.routes'));
 //===============================================================================================================================================
 const PageNotFound = lazy(() => import('./common/components/error/404'));
 const Home = lazy(() => import('./pages/index'));
+const Products = lazy(() => import('./pages/Products'));
+const Events = lazy(() => import('./pages/Events'));
 
 const AppRouter = () => {
   //===============================================================================================================================================
@@ -21,6 +23,10 @@ const AppRouter = () => {
       <Suspense>
         <Routes>
           <Route path="/" element={<Home />} />
+
+          <Route path="/productos" element={<Products />} />
+
+          <Route path="/eventos" element={<Events />} />
 
           <Route path="/donhenrycafe" element={<DonHenryCafeRoutes />} />
 

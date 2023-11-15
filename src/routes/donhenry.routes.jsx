@@ -4,7 +4,7 @@ const AppRouter = () => {
   return (
     <>
       <div>
-      <h2>Rutas para Don Henry</h2>
+      <h2>Rutas para Don Henry Internas</h2>
       {/* <Routes>
       <Route path="/donhenrycafe/menu" component={Menu} />
       <Route path="/donhenrycafe/contact" component={Contact} />
