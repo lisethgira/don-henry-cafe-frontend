@@ -87,9 +87,9 @@ const Navbar = () => {
         </div>
 
         <div className="navbar-end gap-2">
-          <a className="btn">Iniciar Sesión</a>
-          <a className="btn">Registrarse</a>
-        </div>
+  <Link to="/donhenrycafe/login" className="btn">Iniciar Sesión</Link>
+  <Link to="/donhenrycafe/register" className="btn">Registrarse</Link>
+</div>
         <div className="flex-none">
           <div className="dropdown dropdown-end">
             <label tabIndex={0} className="btn btn-ghost btn-circle">
