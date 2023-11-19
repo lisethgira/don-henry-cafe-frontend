@@ -1,4 +1,5 @@
 import Navbar from '../components/navbar';
+import Footer from "../components/footer";
 import ImageSlider from '../components/ImageSlider';
 
 const Home = () => {
@@ -78,6 +79,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };
