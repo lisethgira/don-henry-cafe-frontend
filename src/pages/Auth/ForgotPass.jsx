@@ -1,11 +1,11 @@
-import Navbar from "../../components/navbar";
+import NavAuth from "../../components/navAuth";
 import Footer from "../../components/footer";
 // import Logo from "../../assets/images/logo.png";
 
 const ForgotPassword = () => {
     return (
       <>
-        <Navbar/>
+        <NavAuth/>
         <h1>contenido</h1>
         <Footer/>
       </>

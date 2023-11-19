@@ -1,6 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
 
-
 //imagenes
 import logo from "../assets/donHenryCafe.png";
 
@@ -30,56 +29,74 @@ const Navbar = () => {
               tabIndex={0}
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
-               <li>
-              <NavLink to="/"  className={({ isActive }) =>
+              <li>
+                <NavLink
+                  to="/"
+                  className={({ isActive }) =>
                     isActive ? "font-bold text-[#6A4029]" : ""
-                  }>
-                <a>Home</a>
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/productos"  className={({ isActive }) =>
+                  }
+                >
+                  <a>Home</a>
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/productos"
+                  className={({ isActive }) =>
                     isActive ? "font-bold text-[#6A4029]" : ""
-                  }>
-                <a>Productos</a>
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/eventos"  className={({ isActive }) =>
+                  }
+                >
+                  <a>Productos</a>
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/eventos"
+                  className={({ isActive }) =>
                     isActive ? "font-bold text-[#6A4029]" : ""
-                  }>
-                <a>Eventos</a>
-              </NavLink>
-            </li>
+                  }
+                >
+                  <a>Eventos</a>
+                </NavLink>
+              </li>
             </nav>
           </div>
           <Link to="/">
             <a className="btn btn-ghost">
-            <img src={logo} alt="logo" width="30px" />
-            <p className="hidden md:flex text-xl">Don Henry Café</p>
+              <img src={logo} alt="logo" width="30px" />
+              <p className="hidden md:flex text-xl">Don Henry Café</p>
             </a>
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <nav className="menu menu-horizontal px-1">
             <li>
-              <NavLink to="/"  className={({ isActive }) =>
-                    isActive ? "font-bold text-[#6A4029]" : ""
-                  }>
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  isActive ? "font-bold text-[#6A4029]" : ""
+                }
+              >
                 <a>Home</a>
               </NavLink>
             </li>
             <li>
-              <NavLink to="/productos"  className={({ isActive }) =>
-                    isActive ? "font-bold text-[#6A4029]" : ""
-                  }>
+              <NavLink
+                to="/productos"
+                className={({ isActive }) =>
+                  isActive ? "font-bold text-[#6A4029]" : ""
+                }
+              >
                 <a>Productos</a>
               </NavLink>
             </li>
             <li>
-              <NavLink to="/eventos"  className={({ isActive }) =>
-                    isActive ? "font-bold text-[#6A4029]" : ""
-                  }>
+              <NavLink
+                to="/eventos"
+                className={({ isActive }) =>
+                  isActive ? "font-bold text-[#6A4029]" : ""
+                }
+              >
                 <a>Eventos</a>
               </NavLink>
             </li>
@@ -87,9 +104,13 @@ const Navbar = () => {
         </div>
 
         <div className="navbar-end gap-2">
-  <Link to="/login" className="btn">Iniciar Sesión</Link>
-  <Link to="/register" className="btn">Registrarse</Link>
-</div>
+          <Link to="/login" className="btn">
+            Iniciar Sesión
+          </Link>
+          <Link to="/register" className="btn">
+            Registrarse
+          </Link>
+        </div>
         <div className="flex-none">
           <div className="dropdown dropdown-end">
             <label tabIndex={0} className="btn btn-ghost btn-circle">
@@ -140,9 +161,7 @@ const Navbar = () => {
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <a className="justify-between">
-                  Perfil
-                </a>
+                <a className="justify-between">Perfil</a>
               </li>
               <li>
                 <a>Configuración</a>
