@@ -1,18 +1,18 @@
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
-import ImageSlider from "../components/ImageSlider";
+import Header from "../components/Header";
 
 const Home = () => {
   return (
     <>
       <Navbar />
-      <ImageSlider />
-      <div className="min-h-screen flex justify-center items-center">
+      <Header></Header> 
+      <div className="min-h-screen flex justify-center items-center bg-gray-100 py-6">
         <div className="container mx-6">
-          <h1 className="text-4xl font-bold text-center my-4 text-black">
+          <h1 className="text-4xl font-bold text-center my-4 text-gray-800">
             Bienvenido a Don Henry Café
           </h1>
-          <p className="text-center text-lg text-black mb-8">
+          <p className="text-center text-lg text-gray-700 mb-8">
             Descubre nuestra variedad de cafés de origen único, aprende sobre su
             proceso de elaboración y disfruta de la experiencia de degustar los
             mejores cafés de Colombia.
@@ -32,129 +32,53 @@ const Home = () => {
               {/* Resto de la historia aquí */}
             </p>
             <div
-              className="mt-4 relative"
+              className="mt-4 relative rounded-lg overflow-hidden"
               style={{
-                width: "854px",
-                height: "480px",
-                backgroundColor: "white",
-                borderRadius: "8px",
-                overflow: "hidden",
-                display: "flex",
-                justifyContent: "center",
-                margin: "0 auto",
+                paddingBottom: '56.25%', // 16:9 aspect ratio for responsive video
               }}
             >
               <video
-                src="/videos/henrrycafe.mp4"
+                src="/videos/henrycafe.mp4"
                 loop
                 controls
-                className="w-full h-full"
+                className="absolute w-full h-full"
               ></video>
             </div>
           </div>
 
-          {/* Primer comentario */}
-          <div className="mt-8 flex justify-between space-x-4">
-            <div className="bg-gray-200 p-4 rounded-lg w-full">
-              <div className="flex items-center mb-2">
-                <img
-                  src="/src/assets/icons/user.svg"
-                  alt="Avatar"
-                  className="h-8 w-8 rounded-full mr-2"
-                />
-                <h3 className="text-xl font-bold text-black">Karina</h3>
+          {/* Sección de comentarios */}
+          <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
+            {Array.from({ length: 3 }).map((_, index) => (
+              <div key={index} className="bg-gray-200 p-4 rounded-lg">
+                <div className="flex items-center mb-2">
+                  <img
+                    src="/src/assets/icons/user.svg"
+                    alt="Avatar"
+                    className="h-8 w-8 rounded-full mr-2"
+                  />
+                  <h3 className="text-xl font-bold text-gray-800">Nombre</h3>
+                </div>
+                <p className="text-gray-700">
+                  ¡Café de primera calidad en un ambiente acogedor! ¡Recomiendo
+                  probar su café especial!
+                </p>
+                {/* Sistema de estrellas */}
+                <div className="flex items-center mt-2">
+                  {Array.from({ length: 5 }).map((_, starIndex) => (
+                    <span
+                      key={starIndex}
+                      role="img"
+                      aria-label="star"
+                      className={`text-yellow-400 ${
+                        starIndex < 4 ? 'mr-1' : ''
+                      }`}
+                    >
+                      ⭐️
+                    </span>
+                  ))}
+                </div>
               </div>
-              <p className="text-gray-700">
-                {" "}
-                ¡Café de primera calidad en un ambiente acogedor! ¡Recomiendo
-                probar su café especial!
-              </p>
-              {/* Sistema de estrellas */}
-              <div className="flex items-center mt-2">
-                <span role="img" aria-label="star" className="text-yellow-400">
-                  ⭐️
-                </span>
-                <span role="img" aria-label="star" className="text-yellow-400">
-                  ⭐️
-                </span>
-                <span role="img" aria-label="star" className="text-yellow-400">
-                  ⭐️
-                </span>
-                <span role="img" aria-label="star" className="text-yellow-400">
-                  ⭐️
-                </span>
-                <span role="img" aria-label="star" className="text-gray-400">
-                  ⭐️
-                </span>
-              </div>
-            </div>
-            {/* Segundo comentario */}
-            <div className="bg-gray-200 p-4 rounded-lg w-full">
-              <div className="flex items-center mb-2">
-                <img
-                  src="/src/assets/icons/user.svg"
-                  alt="Avatar"
-                  className="h-8 w-8 rounded-full mr-2"
-                />
-                <h3 className="text-xl font-bold text-black">Liseth</h3>
-              </div>
-              <p className="text-gray-700">
-                Increíble experiencia en Don Henry Café. ¡El aroma y sabor de su
-                café me transportan
-              </p>
-              {/* Sistema de estrellas */}
-              <div className="flex items-center mt-2">
-                <span role="img" aria-label="star" className="text-yellow-400">
-                  ⭐️
-                </span>
-                <span role="img" aria-label="star" className="text-yellow-400">
-                  ⭐️
-                </span>
-                <span role="img" aria-label="star" className="text-yellow-400">
-                  ⭐️
-                </span>
-                <span role="img" aria-label="star" className="text-gray-400">
-                  ⭐️
-                </span>
-                <span role="img" aria-label="star" className="text-gray-400">
-                  ⭐️
-                </span>
-              </div>
-            </div>
-
-            {/* Tercer comentario */}
-            <div className="bg-gray-200 p-4 rounded-lg w-full">
-              <div className="flex items-center mb-2">
-                <img
-                  src="/src/assets/icons/user.svg"
-                  alt="Avatar"
-                  className="h-8 w-8 rounded-full mr-2"
-                />
-                <h3 className="text-xl font-bold text-black">Raul</h3>
-              </div>
-              <p className="text-gray-700">
-                Atención excepcional y café exquisito. ¡Volveré por más de su
-                café de especialidad!
-              </p>
-              {/* Sistema de estrellas */}
-              <div className="flex items-center mt-2">
-                <span role="img" aria-label="star" className="text-yellow-400">
-                  ⭐️
-                </span>
-                <span role="img" aria-label="star" className="text-yellow-400">
-                  ⭐️
-                </span>
-                <span role="img" aria-label="star" className="text-yellow-400">
-                  ⭐️
-                </span>
-                <span role="img" aria-label="star" className="text-yellow-400">
-                  ⭐️
-                </span>
-                <span role="img" aria-label="star" className="text-gray-400">
-                  ⭐️
-                </span>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>

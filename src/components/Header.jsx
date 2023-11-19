@@ -7,7 +7,7 @@ import Image2 from '../assets/images/2.jpg';
 import Image3 from '../assets/images/3.jpg';
 import Image4 from '../assets/images/4.jpg';
 
-const ImageSlider = () => {
+const Header = () => {
   const sliderRef = useRef(null);
 
   useEffect(() => {
@@ -29,7 +29,7 @@ const ImageSlider = () => {
   };
 
   return (
-    <Slider ref={sliderRef} {...settings} className="relative">
+    <Slider ref={sliderRef} {...settings} className="relative w-full h-96 ">
       <div>
         <img src={Image1} alt="Portada 1" className="mx-auto w-full h-96 object-cover" />
       </div>
@@ -46,6 +46,6 @@ const ImageSlider = () => {
   );
 };
 
-export default ImageSlider;
+export default Header;
 
 
