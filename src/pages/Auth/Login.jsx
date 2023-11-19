@@ -1,5 +1,5 @@
-//Dependency
-import Lottie from "react-lottie";
+//Dependencies
+import Player from "react-lottie-player";
 
 //Components
 import NavAuth from "../../components/navAuth";
@@ -15,15 +15,9 @@ const Login = () => {
       <NavAuth />
       <div className="h-screen flex flex-col md:flex-row justify-center space-y-10 md:space-y-0 md:space-x-16 items-center my-2 mx-5 md:mx-0 md:my-0">
         <div className="md:w-1/3 max-w-sm">
-          <Lottie
-            options={{
-              loop: true,
-              autoplay: true,
-              animationData: cafe,
-            }}
-            height={400} // ajusta la altura según tus necesidades
-            width={400} // ajusta el ancho según tus necesidades
-          />
+          <div className="md:w-1/3 max-w-sm">
+            <Player play loop animationData={cafe} style={{width: '400px'}} />
+          </div>
         </div>
         <div className="md:w-1/3 max-w-sm">
           <div className="text-center">
