@@ -150,7 +150,7 @@ const Products = () => {
   return (
     <>
       <Navbar />
-      <div className="bg-yellow-900 text-white min-h-screen flex items-center justify-center">
+      <div className="bg-white text-white min-h-screen flex items-center justify-center">
         <div className="container mx-auto px-4 py-6">
           <h1 className="ml-10 text-3xl font-bold text-left mb-4 text-gradient bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
             Nuestros Productos

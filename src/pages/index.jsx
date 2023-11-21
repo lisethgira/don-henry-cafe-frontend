@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <>
       <Navbar />
-      <Header></Header> 
+      <Header></Header>
       <div className="min-h-screen flex justify-center items-center bg-gray-100 py-6">
         <div className="container mx-6">
           <h1 className="text-4xl font-bold text-center my-4 text-gray-800">
@@ -38,9 +38,11 @@ const Home = () => {
               }}
             >
               <video
-                src="/videos/henrycafe.mp4"
+                src="public\videos\henrrycafe.mp4"
                 loop
                 controls
+                autoPlay
+                muted
                 className="absolute w-full h-full"
               ></video>
             </div>
@@ -69,9 +71,8 @@ const Home = () => {
                       key={starIndex}
                       role="img"
                       aria-label="star"
-                      className={`text-yellow-400 ${
-                        starIndex < 4 ? 'mr-1' : ''
-                      }`}
+                      className={`text-yellow-400 ${starIndex < 4 ? 'mr-1' : ''
+                        }`}
                     >
                       ⭐️
                     </span>
