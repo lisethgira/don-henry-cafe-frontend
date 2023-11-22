@@ -38,6 +38,11 @@ const Register = () => {
           <input
             className="text-sm w-full px-4 py-2 border border-solid border-gray-300 rounded mt-4"
             type="text"
+            placeholder="Segundo Nombre"
+          />
+          <input
+            className="text-sm w-full px-4 py-2 border border-solid border-gray-300 rounded mt-4"
+            type="text"
             placeholder="Primer Apellido"
           />
           <input
@@ -71,7 +76,7 @@ const Register = () => {
               className="mt-4 btn bg-secondary px-4 py-2 text-tertiary uppercase rounded text-xs tracking-wider"
               type="submit"
             >
-              Registrar
+              Registrarse 
             </button>
           </div>
           <div className="mt-4 font-semibold text-sm text-slate-500 text-center md:text-left">

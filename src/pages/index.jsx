@@ -12,11 +12,24 @@ const Home = () => {
           <h1 className="text-4xl font-bold text-center my-4 text-gray-800">
             Bienvenido a Don Henry Café
           </h1>
-          <p className="text-center text-lg text-gray-700 mb-8">
-            Descubre nuestra variedad de cafés de origen único, aprende sobre su
-            proceso de elaboración y disfruta de la experiencia de degustar los
-            mejores cafés de Colombia.
-          </p>
+          <p className="text-lg lg:text-xl text-gray-800 leading-relaxed mb-8 px-6 lg:px-12 py-8 bg-white rounded-lg shadow-md">
+  <span className="block text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+   
+  </span>
+  <p className="mb-4">
+    Sumérgete en nuestro mundo y descubre una amplia gama de cafés de origen único, cuidadosamente seleccionados de las mejores cosechas de Colombia. Desde los exuberantes paisajes montañosos hasta las manos expertas que cultivan y procesan estos granos, cada taza de café que servimos cuenta una historia de pasión y calidad inigualable.
+  </p>
+  <p className="mb-4">
+    En Don Henry Café, no solo te ofrecemos una experiencia de degustación excepcional, sino que también te invitamos a explorar y aprender sobre el arte detrás de cada taza. Nuestros expertos baristas te guiarán a través del proceso de elaboración, desde la cosecha hasta la preparación, revelando los secretos que hacen que nuestros cafés sean únicos en sabor y aroma.
+  </p>
+  <p className="mb-4">
+    Además de deleitarte con nuestra selección exclusiva de cafés, podrás disfrutar de un ambiente acogedor y relajante que complementa a la perfección la experiencia sensorial que ofrecemos. Desde los momentos íntimos de la primera taza del día hasta las conversaciones animadas en una tarde soleada, Don Henry Café es el lugar donde los apasionados del café encuentran su hogar.
+  </p>
+  <p>
+    Te invitamos a sumergirte en el mundo del café en Don Henry Café y a disfrutar de una experiencia que estimulará tus sentidos, alimentará tu curiosidad y te llevará en un viaje sensorial por los sabores auténticos de Colombia.
+  </p>
+</p>
+
           <div className="mt-8 bg-white p-6 rounded-lg shadow-2xl border-2 border-gray-300 relative">
             <h2 className="text-2xl font-bold mb-4 text-yellow-900">
               Quiénes Somos
