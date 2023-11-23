@@ -24,7 +24,7 @@ const Login = () => {
             <p className="text-lg font-semibold mb-4">Inicio de Sesión</p>
           </div>
           <div className="my-5 flex items-center before:mt-0.5 before:flex-1 before:border-t before:border-neutral-300 after:mt-0.5 after:flex-1 after:border-t after:border-neutral-300">
-            <img src={Logo} alt="Logo" className="mx-auto h-16 w-16 mb-4" />
+            <img src={Logo} alt="Logo" className="mx-auto h-20 w-20 mb-4" />
           </div>
           <input
             className="text-sm w-full px-4 py-2 border border-solid border-gray-300 rounded"

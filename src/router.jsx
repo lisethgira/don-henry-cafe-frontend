@@ -18,6 +18,8 @@ const Home = lazy(() => import("./pages/index"));
 const Products = lazy(() => import("./pages/Products"));
 const Events = lazy(() => import("./pages/Events"));
 
+const ErrorPage = lazy(() => import("./common/components/error/index"));
+
 const AppRouter = () => {
   //===============================================================================================================================================
   //========================================== Renders ============================================================================================
@@ -43,6 +45,8 @@ const AppRouter = () => {
           <Route path="/donhenrycafe" element={<DonHenryCafeRoutes />} />
 
           <Route path="*" element={<PageNotFound />} />
+          
+          <Route path="/errorPage" element={<ErrorPage />} />
         </Routes>
       </Suspense>
     </Router>

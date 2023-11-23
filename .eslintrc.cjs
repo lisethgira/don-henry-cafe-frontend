@@ -1,6 +1,14 @@
 module.exports = {
   root: true,
-  env: { browser: true, es2020: true },
+  env: {
+    'node': true,
+    'commonjs': true,
+    'browser': true,
+    'es6': true
+   },
+  globals: {
+    'process': true
+  },
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
@@ -12,6 +20,8 @@ module.exports = {
   settings: { react: { version: '18.2' } },
   plugins: ['react-refresh'],
   rules: {
+    'react/no-unknown-property': ["error", { ignore: ["jsx"] }],
+    'react/prop-types': 'off',
     'react-refresh/only-export-components': [
       'warn',
       { allowConstantExport: true },

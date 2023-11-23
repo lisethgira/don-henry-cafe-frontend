@@ -25,7 +25,7 @@ module.exports = {
         secondary: "#ffba33",
         "secondary-200": "#f4a200",
         tertiary: "#6A4029",
-        quartenary: "#0b132a",
+        quartenary: "#a18262",
       },
       borderWidth: {
         1: "2px",
