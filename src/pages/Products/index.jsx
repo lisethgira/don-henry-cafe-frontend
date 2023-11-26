@@ -4,12 +4,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import cafe_rojo from "../../assets/images/cafe_rojo.PNG";
 import cafe_suave from "../../assets/images/cafe_suave.PNG";
 import kit_cafetero from "../../assets/images/kit_cafetero.jpg";
-import { useState } from "react";
-import Cart from "../../pages/cart/cart"; // Aquí está la importación correcta
+import { useContext } from "react";
+// import Cart from "../cart"; // Aquí está la importación correcta
 
 //Components
 import Navbar from "../../components/navbar";
 import Footer from "../../components/footer";
+import { CartContext } from "../../contexts/ShoppinCartContext";
 
 library.add(faStar);
 
@@ -21,7 +22,7 @@ const Products = () => {
       description:
         "Deléitate con nuestro café de frutos rojos de Andes, Antioquia. Esta mezcla única ofrece una experiencia sensorial: sabores dulces y afrutados se entrelazan en cada sorbo,.",
       image: cafe_rojo,
-      price: "20.000",
+      price: '20000',
       rating: 4,
     },
     {
@@ -30,7 +31,7 @@ const Products = () => {
       description:
         "Prueba nuestro Café Suave  un equilibrio perfecto entre un espresso suave y un toque de leche vaporizada. Experimenta la armonía entre la intensidad del café y la cremosidad sutil en cada sorbo",
       image: cafe_suave,
-      price: "20.000",
+      price: '30000',
       rating: 3,
     },
     {
@@ -39,105 +40,122 @@ const Products = () => {
       description:
         "El kit cafetero colombiano es una experiencia completa que celebra el café premium de Colombia. Incluye granos selectos, tazas auténticas y una prensa francesa para disfrutar la esencia del café colombiano en casa",
       image: kit_cafetero,
-      price: "50.000",
+      price: '50000',
       rating: 5,
     },
-    {
-      id: 1,
-      name: "Cafe De Frutos Rojos",
-      description:
-        "Deléitate con nuestro café de frutos rojos de Andes, Antioquia. Esta mezcla única ofrece una experiencia sensorial: sabores dulces y afrutados se entrelazan en cada sorbo,.",
-      image: cafe_rojo,
-      price: "20.000",
-      rating: 4,
-    },
-    {
-      id: 2,
-      name: "Cafe Suave",
-      description:
-        "Prueba nuestro Café Suave  un equilibrio perfecto entre un espresso suave y un toque de leche vaporizada. Experimenta la armonía entre la intensidad del café y la cremosidad sutil en cada sorbo",
-      image: cafe_suave,
-      price: "20.000",
-      rating: 3,
-    },
-    {
-      id: 3,
-      name: "Kit cafetero",
-      description:
-        "El kit cafetero colombiano es una experiencia completa que celebra el café premium de Colombia. Incluye granos selectos, tazas auténticas y una prensa francesa para disfrutar la esencia del café colombiano en casa",
-      image: kit_cafetero,
-      price: "50.000",
-      rating: 5,
-    },
-    {
-      id: 1,
-      name: "Cafe De Frutos Rojos",
-      description:
-        "Deléitate con nuestro café de frutos rojos de Andes, Antioquia. Esta mezcla única ofrece una experiencia sensorial: sabores dulces y afrutados se entrelazan en cada sorbo,.",
-      image: cafe_rojo,
-      price: "20.000",
-      rating: 4,
-    },
-    {
-      id: 2,
-      name: "Cafe Suave",
-      description:
-        "Prueba nuestro Café Suave  un equilibrio perfecto entre un espresso suave y un toque de leche vaporizada. Experimenta la armonía entre la intensidad del café y la cremosidad sutil en cada sorbo",
-      image: cafe_suave,
-      price: "20.000",
-      rating: 3,
-    },
-    {
-      id: 3,
-      name: "Kit cafetero",
-      description:
-        "El kit cafetero colombiano es una experiencia completa que celebra el café premium de Colombia. Incluye granos selectos, tazas auténticas y una prensa francesa para disfrutar la esencia del café colombiano en casa",
-      image: kit_cafetero,
-      price: "50.000",
-      rating: 5,
-    },
-    {
-      id: 1,
-      name: "Cafe De Frutos Rojos",
-      description:
-        "Deléitate con nuestro café de frutos rojos de Andes, Antioquia. Esta mezcla única ofrece una experiencia sensorial: sabores dulces y afrutados se entrelazan en cada sorbo,.",
-      image: cafe_rojo,
-      price: "20.000",
-      rating: 4,
-    },
-    {
-      id: 2,
-      name: "Cafe Suave",
-      description:
-        "Prueba nuestro Café Suave  un equilibrio perfecto entre un espresso suave y un toque de leche vaporizada. Experimenta la armonía entre la intensidad del café y la cremosidad sutil en cada sorbo",
-      image: cafe_suave,
-      price: "20.000",
-      rating: 3,
-    },
-    {
-      id: 3,
-      name: "Kit cafetero",
-      description:
-        "El kit cafetero colombiano es una experiencia completa que celebra el café premium de Colombia. Incluye granos selectos, tazas auténticas y una prensa francesa para disfrutar la esencia del café colombiano en casa",
-      image: kit_cafetero,
-      price: "50.000",
-      rating: 5,
-    },
+    // {
+    //   id: 1,
+    //   name: "Cafe De Frutos Rojos",
+    //   description:
+    //     "Deléitate con nuestro café de frutos rojos de Andes, Antioquia. Esta mezcla única ofrece una experiencia sensorial: sabores dulces y afrutados se entrelazan en cada sorbo,.",
+    //   image: cafe_rojo,
+    //   price: "20.000",
+    //   rating: 4,
+    // },
+    // {
+    //   id: 2,
+    //   name: "Cafe Suave",
+    //   description:
+    //     "Prueba nuestro Café Suave  un equilibrio perfecto entre un espresso suave y un toque de leche vaporizada. Experimenta la armonía entre la intensidad del café y la cremosidad sutil en cada sorbo",
+    //   image: cafe_suave,
+    //   price: "20.000",
+    //   rating: 3,
+    // },
+    // {
+    //   id: 3,
+    //   name: "Kit cafetero",
+    //   description:
+    //     "El kit cafetero colombiano es una experiencia completa que celebra el café premium de Colombia. Incluye granos selectos, tazas auténticas y una prensa francesa para disfrutar la esencia del café colombiano en casa",
+    //   image: kit_cafetero,
+    //   price: "50.000",
+    //   rating: 5,
+    // },
+    // {
+    //   id: 1,
+    //   name: "Cafe De Frutos Rojos",
+    //   description:
+    //     "Deléitate con nuestro café de frutos rojos de Andes, Antioquia. Esta mezcla única ofrece una experiencia sensorial: sabores dulces y afrutados se entrelazan en cada sorbo,.",
+    //   image: cafe_rojo,
+    //   price: "20.000",
+    //   rating: 4,
+    // },
+    // {
+    //   id: 2,
+    //   name: "Cafe Suave",
+    //   description:
+    //     "Prueba nuestro Café Suave  un equilibrio perfecto entre un espresso suave y un toque de leche vaporizada. Experimenta la armonía entre la intensidad del café y la cremosidad sutil en cada sorbo",
+    //   image: cafe_suave,
+    //   price: "20.000",
+    //   rating: 3,
+    // },
+    // {
+    //   id: 3,
+    //   name: "Kit cafetero",
+    //   description:
+    //     "El kit cafetero colombiano es una experiencia completa que celebra el café premium de Colombia. Incluye granos selectos, tazas auténticas y una prensa francesa para disfrutar la esencia del café colombiano en casa",
+    //   image: kit_cafetero,
+    //   price: "50.000",
+    //   rating: 5,
+    // },
+    // {
+    //   id: 1,
+    //   name: "Cafe De Frutos Rojos",
+    //   description:
+    //     "Deléitate con nuestro café de frutos rojos de Andes, Antioquia. Esta mezcla única ofrece una experiencia sensorial: sabores dulces y afrutados se entrelazan en cada sorbo,.",
+    //   image: cafe_rojo,
+    //   price: "20.000",
+    //   rating: 4,
+    // },
+    // {
+    //   id: 2,
+    //   name: "Cafe Suave",
+    //   description:
+    //     "Prueba nuestro Café Suave  un equilibrio perfecto entre un espresso suave y un toque de leche vaporizada. Experimenta la armonía entre la intensidad del café y la cremosidad sutil en cada sorbo",
+    //   image: cafe_suave,
+    //   price: "20.000",
+    //   rating: 3,
+    // },
+    // {
+    //   id: 3,
+    //   name: "Kit cafetero",
+    //   description:
+    //     "El kit cafetero colombiano es una experiencia completa que celebra el café premium de Colombia. Incluye granos selectos, tazas auténticas y una prensa francesa para disfrutar la esencia del café colombiano en casa",
+    //   image: kit_cafetero,
+    //   price: "50.000",
+    //   rating: 5,
+    // },
   ];
 
-  const [cart, setCart] = useState([]); // Estado para almacenar los productos agregados al carrito
-  const [isCartVisible, setCartVisible] = useState(false); // Estado para mostrar u ocultar el carrito
+  const setCart = useContext(CartContext)[1];
+
+  // const [cart, setCart] = useState([]); // Estado para almacenar los productos agregados al carrito
+  // const [isCartVisible, setCartVisible] = useState(false); // Estado para mostrar u ocultar el carrito
  
   // Función para agregar un producto al carrito
+  // const addToCart = (product) => {
+  //  setCart((currentCart) => [...currentCart, product]);
+  //  setCartVisible(true); // Mostrar el carrito después de agregar un producto
+  // };
+
+
   const addToCart = (product) => {
-   setCart((currentCart) => [...currentCart, product]);
-   setCartVisible(true); // Mostrar el carrito después de agregar un producto
-  };
+     setCart((currentItems) => {
+        const itemFound = currentItems.find(item => item.id === product.id)
+        if(itemFound) {
+          return currentItems.map(item => {
+            if(item.id === product.id) return {...item, quantity: item.quantity + 1}
+            return item;
+          })
+        } else {
+          return [...currentItems, {...product, quantity: 1}]
+        }
+     });
+    };
  
   // Si el carrito está visible, renderizar los elementos del carrito usando el componente Cart
-  if (isCartVisible) {
-   return <Cart cart={cart} />; // Pasar el estado del carrito al componente Cart
-  }
+  // if (isCartVisible) {
+  //  return <Cart cart={cart} />; // Pasar el estado del carrito al componente Cart
+  // }
  
   return (
    <>
@@ -183,7 +201,7 @@ const Products = () => {
                   onClick={() => addToCart(product)}
                   className="block w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                  >
-                  Comprar
+                  Agregar
                  </button>
                </div>
              </div>
