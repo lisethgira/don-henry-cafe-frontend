@@ -70,7 +70,7 @@ const Footer = () => {
               className="opacity-80 transition-opacity hover:opacity-100"
             >
               <FaWhatsapp
-                className="mr-1 h-5 w-5"
+                className="h-5 w-5"
                 style={{ color: '#25D366' }}
               />
             </Typography>
@@ -80,7 +80,7 @@ const Footer = () => {
               className="opacity-80 transition-opacity hover:opacity-100"
             >
               <FaInstagram
-                className="mr-1 h-5 w-5"
+                className="h-5 w-5"
                 style={{ color: '#C13584' }}
               />
             </Typography>
@@ -90,7 +90,7 @@ const Footer = () => {
               className="opacity-80 transition-opacity hover:opacity-100"
             >
               <FaFacebook
-                className="mr-1 h-5 w-5"
+                className="h-5 w-5"
                 style={{ color: '#1877F2' }}
               />
             </Typography>

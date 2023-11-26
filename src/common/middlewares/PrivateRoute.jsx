@@ -1,4 +1,3 @@
-
 import {
     useState,
     useContext,
@@ -50,7 +49,7 @@ const PrivateRoute = ({ children, ...props }) => {
             baseURL: `${process.env.REACT_APP_API_BACK_PROT}://${process.env.REACT_APP_API_BACK_HOST}${process.env.REACT_APP_API_BACK_PORT}`,
             url: `${process.env.REACT_APP_API_DATALAKE_LOGIN_GETDATA}`,
             headers: {
-                strApp:"VIAJES",
+                strApp:"DonHeryCafe",
                 token
             },
             cancelToken: signalGetDataToken.token,
@@ -122,7 +121,7 @@ const PrivateRoute = ({ children, ...props }) => {
             <PageError
                 severity="error"
                 title={error.msg}
-                msg="Ha ocurrido un error al obtener la información del token, si el error persiste por favor comunícate con el área de TI para más información."
+                msg="Ha ocurrido un error al obtener la información del token, si el error persiste por favor comunícate con el área de soporte para más información."
             />
         );
     }

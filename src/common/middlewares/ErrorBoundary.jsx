@@ -1,5 +1,3 @@
-import React from "react";
-
 //Librerias
 import { ErrorBoundary } from "react-error-boundary";
 
