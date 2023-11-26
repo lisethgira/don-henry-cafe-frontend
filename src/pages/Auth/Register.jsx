@@ -9,7 +9,7 @@ import Footer from "../../components/footer";
 //Images
 import Logo from "../../assets/images/logo.png";
 import cafe2 from "../../assets/lotties/cafe2.json";
-import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 import Validation from "./services/validationRegister";
 
@@ -28,9 +28,11 @@ const Register = () => {
   const [errors, setErrors] = useState({});
 
   const handleInput = (event) => {
+    const { name, value } = event.target;
     SetValues((prev) => ({
       ...prev,
-      [event.target.name]: [event.target.vlaue],
+      [name]: value,
+      whatsapp: prev.isSameNumber === "true" ? value : prev.whatsapp,
     }));
   };
 
@@ -47,7 +49,7 @@ const Register = () => {
       showPassword: !prev.showPassword,
     }));
   };
-  
+
   const handleSubmit = (event) => {
     event.preventDefault();
     setErrors(Validation(values));
@@ -72,7 +74,7 @@ const Register = () => {
               className="text-sm w-full px-4 py-2 border border-solid border-gray-300 rounded"
               name="email"
               type="text"
-              placeholder="Correo Electronico"
+              placeholder="Correo electrónico"
               onChange={handleInput}
             />
             <span>
@@ -120,7 +122,7 @@ const Register = () => {
               className="text-sm w-full px-4 py-2 border border-solid border-gray-300 rounded mt-4"
               name="cellphone"
               type="phone"
-              placeholder="Telefono"
+              placeholder="Teléfono"
               onChange={handleInput}
             />
             <span>
@@ -128,13 +130,26 @@ const Register = () => {
                 <span className="text-red-600"> {errors.cellphone}</span>
               )}
             </span>
+            {values.cellphone && (
+            <div>
+            <h4 className="mt-3"> ¿el número de telefóno y whatsapp son iguales? </h4>
+            <select
+              className="text-sm w-full px-4 py-2 border border-solid border-gray-300 rounded mt-4"
+              name="isSameNumber"
+              onChange={handleInput}
+            >
+              <option value={true}>Sí, es el mismo número</option>
+              <option value={false}>No, son diferentes números</option>
+            </select>
+            </div>)}
+            {values.isSameNumber === "false" && (
             <input
               className="text-sm w-full px-4 py-2 border border-solid border-gray-300 rounded mt-4"
               name="whatsapp"
               type="phone"
               placeholder="Whatsapp"
               onChange={handleInput}
-            />
+            />)}
             <span>
               {errors.whatsapp && (
                 <span className="text-red-600"> {errors.whatsapp}</span>
@@ -160,22 +175,22 @@ const Register = () => {
                 <span className="text-red-600"> {errors.password}</span>
               )}
             </span>
-           <div className="relative" >
-           <input
-              className="text-sm w-full px-4 py-2 border border-solid border-gray-300 rounded mt-4"
-              name="passwordConfirm"
-              type={values.showPasswordConfirm ? "text" : "password"}
-              placeholder="Confirmar contraseña"
-              onChange={handleInput}
-            />
-            <div
+            <div className="relative">
+              <input
+                className="text-sm w-full px-4 py-2 border border-solid border-gray-300 rounded mt-4"
+                name="passwordConfirm"
+                type={values.showPasswordConfirm ? "text" : "password"}
+                placeholder="Confirmar contraseña"
+                onChange={handleInput}
+              />
+              <div
                 className="absolute top-1/2 right-3 transform -translate-y-1/2 cursor-pointer"
                 onClick={handleTogglePasswordConfirm}
               >
                 {values.showPasswordConfirm ? <FaEyeSlash /> : <FaEye />}
               </div>
-           </div>
-           <span>
+            </div>
+            <span>
               {errors.passwordConfirm && (
                 <span className="text-red-600"> {errors.passwordConfirm}</span>
               )}

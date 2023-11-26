@@ -33,7 +33,7 @@ const Login = () => {
   };
 
   const handleInput = (event) => {
-    SetValues(prev => ({...prev,[event.target.name]: [event.target.vlaue]}))
+    SetValues(prev => ({...prev,[event.target.name]: [event.target.value]}))
   }
 
   const handleSubmit =(event) => {
