@@ -1,5 +1,7 @@
 import { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { ShoppinCartProvider } from "./contexts/ShoppinCartContext";
+import Cart from "./pages/cart";
 
 //===============================================================================================================================================
 //========================================== Rutas principales  =================================================================================
@@ -23,30 +25,36 @@ const AppRouter = () => {
   //========================================== Renders ============================================================================================
   //===============================================================================================================================================
   return (
-    <Router>
-      <Suspense>
-        <Routes>
-          <Route path="/" element={<Home />} />
+    <ShoppinCartProvider>
 
-          <Route path="/productos" element={<Products />} />
+      <Router>
+        <Suspense>
+          <Routes>
+            <Route path="/" element={<Home />} />
 
-          <Route path="/eventos" element={<Events />} />
+            <Route path="/productos" element={<Products />} />
+    
+            <Route path="/cart" element={<Cart />} />
 
-          <Route path="/login" element={<Login />} />
+            <Route path="/eventos" element={<Events />} />
 
-          <Route path="/register" element={<Register />} />
+            <Route path="/login" element={<Login />} />
 
-          <Route path="/forgotpassword" element={<ForgotPassword />} />
+            <Route path="/register" element={<Register />} />
 
-          <Route path="/resetpassword" element={<ResetPassword />} />
+            <Route path="/forgotpassword" element={<ForgotPassword />} />
 
-          <Route path="/donhenrycafe" element={<DonHenryCafeRoutes />} />
+            <Route path="/resetpassword" element={<ResetPassword />} />
 
-          <Route path="*" element={<PageNotFound />} />
+            <Route path="/donhenrycafe" element={<DonHenryCafeRoutes />} />
 
-        </Routes>
-      </Suspense>
-    </Router>
+            <Route path="*" element={<PageNotFound />} />
+
+          </Routes>
+        </Suspense>
+      </Router>
+    </ShoppinCartProvider>
+
   );
 };
 

@@ -1,9 +1,13 @@
 import { Link } from "react-router-dom";
+// import { useAuth0 } from "@auth0/auth0-react";
 
 //imagenes
 import logo from "../assets/donHenryCafe.png";
 
 const NavAuth = () => {
+
+  // const { loginWithRedirect } = useAuth0();
+
   return (
     <>
       <div className="flex items-center justify-between bg-base-100 p-4">
