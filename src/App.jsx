@@ -1,9 +1,13 @@
-import './index.css'
-import AppRouter from './router';
+import "./index.css";
+import { Toaster } from "react-hot-toast";
+import AppRouter from "./router";
 
 const App = () => {
-  return <>
-  <AppRouter />
-  </>
+  return (
+    <>
+      <Toaster />
+      <AppRouter />
+    </>
+  );
 };
 export default App;

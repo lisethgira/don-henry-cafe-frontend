@@ -1,12 +1,13 @@
-import { Link } from "react-router-dom";
-// import { useAuth0 } from "@auth0/auth0-react";
+import { Link, useLocation } from "react-router-dom";
 
 //imagenes
 import logo from "../assets/donHenryCafe.png";
 
 const NavAuth = () => {
 
-  // const { loginWithRedirect } = useAuth0();
+  const location = useLocation();
+  
+  const isLoginScreen = location.pathname === '/login';
 
   return (
     <>
@@ -37,13 +38,16 @@ const NavAuth = () => {
         </div>
 
         <div className="flex gap-2">
-          <Link to="/login" className="btn bg-secondary text-tertiary">
-            Iniciar Sesión
-          </Link>
-          <Link to="/register" className="btn bg-secondary text-tertiary">
-            Registrarse
-          </Link>
-        </div>
+      {isLoginScreen ? (
+        <Link to="/register" className="btn bg-secondary text-tertiary">
+          Registrarse
+        </Link>
+      ) : (
+        <Link to="/login" className="btn bg-secondary text-tertiary">
+          Iniciar Sesión
+        </Link>
+      )}
+    </div>
       </div>
     </>
   );

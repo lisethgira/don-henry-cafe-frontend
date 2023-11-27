@@ -1,17 +1,32 @@
+import { useContext, useRef } from "react";
+
+//Context
+import { AuthContext } from "../common/middlewares/Auth";
+
 import { Link, NavLink } from "react-router-dom";
 
 //imagenes
 import logo from "../assets/donHenryCafe.png";
-import { useContext } from "react";
 import { CartContext } from "../contexts/ShoppinCartContext";
 
 const Navbar = () => {
-
+  //===============================================================================================================================================
+  //========================================== Context ============================================================================================
+  //===============================================================================================================================================
+  const { token, cerrarSesion } = useContext(AuthContext);
   const [cart] = useContext(CartContext);
-  const quantity = cart.reduce((acc, currElem) => acc + currElem.quantity, 0);
-  console.log(cart)
-  const subTotal = cart.reduce((acc, currElem) => acc + (parseInt(currElem.price) * currElem.quantity), 0);
 
+  //===============================================================================================================================================
+  //========================================== Referencias ========================================================================================
+  //===============================================================================================================================================
+  const cerrarSesionRef = useRef(cerrarSesion);
+
+  const quantity = cart.reduce((acc, currElem) => acc + currElem.quantity, 0);
+  console.log(cart);
+  const subTotal = cart.reduce(
+    (acc, currElem) => acc + parseInt(currElem.price) * currElem.quantity,
+    0
+  );
 
   return (
     <>
@@ -111,15 +126,17 @@ const Navbar = () => {
             </li>
           </nav>
         </div>
-
         <div className="navbar-end gap-2">
-          <Link to="/login" className="btn">
-            Iniciar Sesión
-          </Link>
-          <Link to="/register" className="btn">
-            Registrarse
-          </Link>
-        </div>
+        {!token ? (
+           <div className="flex gap-2">
+            <Link to="/login" className="btn bg-secondary text-tertiary">
+              Iniciar Sesión
+            </Link>
+            <Link to="/register" className="btn bg-secondary text-tertiary">
+              Registrarse
+            </Link>
+            </div>
+        ) : null}
 
         <div className="flex-none">
           <div className="dropdown dropdown-end">
@@ -139,7 +156,9 @@ const Navbar = () => {
                     d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
                   />
                 </svg>
-                <span className="badge badge-sm indicator-item">{quantity}</span>
+                <span className="badge badge-sm indicator-item">
+                  {quantity}
+                </span>
               </div>
             </label>
             <div
@@ -150,37 +169,40 @@ const Navbar = () => {
                 <span className="font-bold text-lg"> {quantity} Items</span>
                 <span className="text-info">Subtotal: ${subTotal} </span>
                 <div className="card-actions">
-                  <Link to='/cart' className="btn btn-primary btn-block">
+                  <Link to="/cart" className="btn btn-primary btn-block">
                     Ver Carrito
                   </Link>
                 </div>
               </div>
             </div>
           </div>
-          <div className="dropdown dropdown-end">
-            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-              <div className="w-10 rounded-full">
-                <img
-                  alt="Tailwind CSS Navbar component"
-                  src="https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/44/44dc4bee8bf175f573c7d417afc31540ac40f518_full.jpg"
-                />
-              </div>
-            </label>
-            <ul
-              tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
-            >
-              <li>
-                <a className="justify-between">Perfil</a>
-              </li>
-              <li>
-                <a>Configuración</a>
-              </li>
-              <li>
-                <a>Cerrar Sesión</a>
-              </li>
-            </ul>
-          </div>
+          {token ? (
+            <div className="dropdown dropdown-end">
+              <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                <div className="w-10 rounded-full">
+                  <img
+                    alt="Tailwind CSS Navbar component"
+                    src="https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/44/44dc4bee8bf175f573c7d417afc31540ac40f518_full.jpg"
+                  />
+                </div>
+              </label>
+              <ul
+                tabIndex={0}
+                className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              >
+                <li>
+                  <a className="justify-between">Perfil</a>
+                </li>
+                <li>
+                  <a>Configuración</a>
+                </li>
+                <li onClick={cerrarSesionRef}>
+                  <a>Cerrar Sesión</a>
+                </li>
+              </ul>
+            </div>
+          ) : null}
+        </div>
         </div>
       </div>
     </>

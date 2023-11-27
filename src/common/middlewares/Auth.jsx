@@ -8,7 +8,7 @@ export const AuthContext = createContext();
 
 const Auth = ({ children }) => {
     const [data, setData] = useState({
-        token: undefined,
+        token: "",
         strData: undefined,
     });
 

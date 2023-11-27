@@ -1,8 +1,13 @@
 import { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { ShoppinCartProvider } from "./contexts/ShoppinCartContext";
-import Cart from "./pages/cart";
 
+//Middlewares
+import Auth from "./common/middlewares/Auth";
+
+//Components
+import Loading from "./common/components/Loader";
+
+import { ShoppinCartProvider } from "./contexts/ShoppinCartContext";
 //===============================================================================================================================================
 //========================================== Rutas principales  =================================================================================
 //===============================================================================================================================================
@@ -19,42 +24,42 @@ const PageNotFound = lazy(() => import("./common/components/error/404"));
 const Home = lazy(() => import("./pages/index"));
 const Products = lazy(() => import("./pages/Products"));
 const Events = lazy(() => import("./pages/Events"));
+const Cart = lazy(() => import("./pages/cart"));
 
 const AppRouter = () => {
   //===============================================================================================================================================
   //========================================== Renders ============================================================================================
   //===============================================================================================================================================
   return (
-    <ShoppinCartProvider>
+    <Auth>
+      <ShoppinCartProvider>
+        <Router>
+          <Suspense fallback={<Loading />}>
+            <Routes>
+              <Route path="/" element={<Home />} />
 
-      <Router>
-        <Suspense>
-          <Routes>
-            <Route path="/" element={<Home />} />
+              <Route path="/register" element={<Register />} />
 
-            <Route path="/productos" element={<Products />} />
-    
-            <Route path="/cart" element={<Cart />} />
+              <Route path="/login" element={<Login />} />
 
-            <Route path="/eventos" element={<Events />} />
+              <Route path="/forgotpassword" element={<ForgotPassword />} />
 
-            <Route path="/login" element={<Login />} />
+              <Route path="/resetpassword" element={<ResetPassword />} />
 
-            <Route path="/register" element={<Register />} />
+              <Route path="/productos" element={<Products />} />
 
-            <Route path="/forgotpassword" element={<ForgotPassword />} />
+              <Route path="/cart" element={<Cart />} />
 
-            <Route path="/resetpassword" element={<ResetPassword />} />
+              <Route path="/eventos" element={<Events />} />
 
-            <Route path="/donhenrycafe" element={<DonHenryCafeRoutes />} />
+              <Route path="/donhenrycafe" element={<DonHenryCafeRoutes />} />
 
-            <Route path="*" element={<PageNotFound />} />
-
-          </Routes>
-        </Suspense>
-      </Router>
-    </ShoppinCartProvider>
-
+              <Route path="*" element={<PageNotFound />} />
+            </Routes>
+          </Suspense>
+        </Router>
+      </ShoppinCartProvider>
+    </Auth>
   );
 };
 
